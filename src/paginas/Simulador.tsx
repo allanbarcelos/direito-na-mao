@@ -22,8 +22,12 @@ export function Simulador() {
   const [s, setS] = useState<Simulacao>(carregarSimulacao)
   const [passo, setPasso] = useState(0)
 
-  useEffect(() => salvarSimulacao(s), [s])
-  useEffect(() => window.scrollTo(0, 0), [passo])
+  useEffect(() => {
+    salvarSimulacao(s)
+  }, [s])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [passo])
 
   const pessoas = s.familia.pessoas
   const n = pessoas.length
@@ -152,7 +156,7 @@ export function Simulador() {
 function FormPessoa({ pessoa: p, indice, total, onChange }: {
   pessoa: Pessoa; indice: number; total: number; onChange: (p: Partial<Pessoa>) => void
 }) {
-  const quem = indice === 0 ? 'você' : p.nome.trim() || `a pessoa ${indice + 1}`
+  const rotuloIdade = indice === 0 ? 'Sua idade (anos)' : `Idade de ${p.nome.trim() || `pessoa ${indice + 1}`} (anos)`
   const adulto = p.idade >= 16
   const podeGestar = p.idade >= 10 && p.idade <= 55
   return (
@@ -167,7 +171,7 @@ function FormPessoa({ pessoa: p, indice, total, onChange }: {
           <input id={`nome-${p.id}`} value={p.nome} autoComplete="off" onChange={(e) => onChange({ nome: e.target.value })} placeholder={indice === 0 ? 'Eu' : 'Ex.: Maria, vovó, João'} />
         </div>
       )}
-      <Contador rotulo={`Idade de ${quem} (anos)`} valor={p.idade} min={0} max={120} onChange={(idade) => onChange({ idade })} />
+      <Contador rotulo={rotuloIdade} valor={p.idade} min={0} max={120} onChange={(idade) => onChange({ idade })} />
 
       <SimNao icone="♿" pergunta="Tem alguma deficiência?" ajuda="Física, mental, intelectual, visual, auditiva ou doença que impede a vida normal por mais de 2 anos." valor={p.deficiencia} onChange={(v) => onChange({ deficiencia: v, zika: v && p.zika })} />
       {p.deficiencia && (

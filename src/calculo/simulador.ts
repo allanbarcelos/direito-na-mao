@@ -291,7 +291,7 @@ export function simular(f: Familia): Resultado {
   })
   const melhor = unicos[0]
 
-  const base = rendaBase(f) + f.pessoas.filter((p) => p.recebeBPC).length * BPC.valor
+  const base = rendaBase(f) + (f.pessoas.filter((p) => p.recebeBPC).length + melhor.bpcPara.length) * BPC.valor
   const ctxConfirmar: Contexto = {
     familia: f, n: f.pessoas.length, rendaFamiliar: base, rendaPorPessoa: base / f.pessoas.length,
     bolsaFamilia: 0, recebeBolsaFamilia: melhor.comBolsaFamilia, bpcPara: new Set(melhor.bpcPara),
