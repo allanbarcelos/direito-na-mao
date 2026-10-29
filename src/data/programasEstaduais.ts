@@ -1,22 +1,11 @@
-import type { Contexto } from '../calculo/simulador'
-import type { Frequencia } from '../calculo/tipos'
+import type { Avaliacao, Contexto } from '../calculo/tipos'
 import { DATA_ATUALIZACAO as C, MEIO_SALARIO, SALARIO_MINIMO } from './referencias'
 import type { Programa, UF } from './tipos'
-
-export interface AvaliacaoEstadual {
-  valorMensal: number
-  valorTexto: string
-  motivo: string
-  pessoa?: string
-  avisos?: string[]
-  temporario?: string
-  frequencia?: Frequencia
-}
 
 export interface ProgramaEstadual extends Programa {
   uf: UF
   /** Devolve o que a família recebe deste programa (lista vazia = não tem direito). */
-  avaliar: (ctx: Contexto) => AvaliacaoEstadual[]
+  avaliar: (ctx: Contexto) => Avaliacao[]
 }
 
 // ---------- ajudantes ----------
@@ -34,7 +23,7 @@ function porEstudante(
   valor: (p: Contexto['familia']['pessoas'][number]) => number,
   motivo: string,
   avisos: string[] = [],
-): AvaliacaoEstadual[] {
+): Avaliacao[] {
   return ctx.familia.pessoas.flatMap((p, i) => {
     if (!filtro(p)) return []
     const v = valor(p)

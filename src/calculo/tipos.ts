@@ -62,6 +62,42 @@ export interface BeneficioCalculado {
   esfera: 'federal' | 'estadual'
 }
 
+/** Dados de um cenário que as regras dos programas usam para decidir quem tem direito. */
+export interface Contexto {
+  familia: Familia
+  n: number
+  /** Renda da família que conta para o Bolsa Família (trabalho + aposentadoria + BPC). */
+  rendaFamiliar: number
+  rendaPorPessoa: number
+  /** Valor do Bolsa Família neste cenário (0 se não recebe). */
+  bolsaFamilia: number
+  recebeBolsaFamilia: boolean
+  /** Ids das pessoas para quem se pede o BPC neste cenário. */
+  bpcPara: Set<string>
+}
+
+/** O que uma regra devolve para cada direito encontrado (nome e ícone vêm do catálogo). */
+export interface Avaliacao {
+  valorMensal: number
+  valorTexto: string
+  motivo: string
+  pessoa?: string
+  avisos?: string[]
+  temporario?: string
+  frequencia?: Frequencia
+  /** Substitui o nome do catálogo (ex.: "Bolsa Família (Regra de Proteção)"). */
+  nome?: string
+}
+
+/**
+ * Regra de um programa. Para incluir um programa novo basta criar uma regra
+ * e registrá-la na lista — o motor de simulação não muda.
+ */
+export interface Regra {
+  programaId: string
+  avaliar: (ctx: Contexto) => Avaliacao[]
+}
+
 export interface Cenario {
   /** Ids das pessoas para quem se pede o BPC. */
   bpcPara: string[]
