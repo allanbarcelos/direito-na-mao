@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Layout } from './componentes/Layout'
 import { Gastos } from './paginas/Gastos'
 import { Inicio } from './paginas/Inicio'
@@ -8,10 +8,12 @@ import { Resultado } from './paginas/Resultado'
 import { Simulador } from './paginas/simulador/Simulador'
 import { Sobre } from './paginas/Sobre'
 
-// HashRouter: funciona em qualquer hospedagem estática, sem configuração de servidor.
+/** Caminho base sem a barra final ('' quando o site está na raiz). */
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
+
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename={BASE}>
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Inicio />} />
@@ -26,6 +28,6 @@ export default function App() {
           <Route path="*" element={<Inicio />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   )
 }

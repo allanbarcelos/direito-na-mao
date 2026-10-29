@@ -37,7 +37,7 @@ Se o `npm install` falhar com `UNABLE_TO_VERIFY_LEAF_SIGNATURE`, a rede provavel
 
 ## Stack
 
-React 19 com TypeScript, Vite, React Router (com `HashRouter`), vite-plugin-pwa, Vitest e oxlint. Os ícones são do Bootstrap Icons e a fonte é a Atkinson Hyperlegible; as duas vêm de pacotes npm e entram no build, então o site não depende de CDN.
+React 19 com TypeScript, Vite, React Router, vite-plugin-pwa, Vitest e oxlint. Os ícones são do Bootstrap Icons e a fonte é a Atkinson Hyperlegible; as duas vêm de pacotes npm e entram no build, então o site não depende de CDN.
 
 Não há backend. Os dados ficam em arquivos JSON dentro do repositório e o cálculo roda no navegador. A revisão periódica dos dados usa um modelo de IA por API, mas só no GitHub Actions; o site publicado não chama nenhuma API.
 
@@ -186,7 +186,9 @@ Nenhuma resposta sai do aparelho. Não há servidor, analytics nem cookies. As r
 
 O workflow `.github/workflows/deploy.yml` roda lint, testes e build a cada push na `main` e publica a pasta `dist/` no GitHub Pages. Para funcionar, o repositório precisa estar com **Settings > Pages > Source** em **GitHub Actions**.
 
-Como o build usa caminhos relativos e `HashRouter`, a pasta `dist/` também funciona em qualquer outra hospedagem estática.
+Os endereços não usam `#` (ex.: `/direito-na-mao/programas/bpc`). Como o GitHub Pages não tem como redirecionar rotas para o app, o build gera um `404.html` igual ao `index.html`: quem abre um link direto recebe essa página e o React mostra a tela certa. Links antigos com `#/` são convertidos sozinhos.
+
+O caminho onde o site é publicado vem da variável `BASE_PATH` no build; o workflow de deploy preenche com o caminho do GitHub Pages. Para publicar em outro lugar, rode `BASE_PATH=/caminho/ npm run build` (ou deixe vazio para a raiz do domínio) e configure o servidor para devolver o `index.html` nas rotas do app.
 
 ## Limitações
 

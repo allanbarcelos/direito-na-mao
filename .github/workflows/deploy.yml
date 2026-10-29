@@ -46,10 +46,14 @@ jobs:
       - name: Testes
         run: npm test
 
-      - name: Build
-        run: npm run build
-
       - uses: actions/configure-pages@v5
+        id: pages
+
+      # O site fica em https://<usuario>.github.io/<repositorio>/; o build precisa saber esse caminho.
+      - name: Build
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}/
+        run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
