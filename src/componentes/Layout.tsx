@@ -5,6 +5,7 @@ import { DATA_ATUALIZACAO } from '../data/referencias'
 import { dataBR } from '../lib/formatar'
 import { pararFala } from '../lib/falar'
 import { Acessibilidade } from './Acessibilidade'
+import { AvisoOficial } from './AvisoOficial'
 
 const LINKS = [
   { para: '/', icone: '🏠', texto: 'Início' },
@@ -22,7 +23,7 @@ export function Layout() {
   useEffect(() => {
     window.scrollTo(0, 0)
     pararFala()
-    principal.current?.focus()
+    principal.current?.focus({ preventScroll: true })
   }, [pathname])
 
   return (
@@ -32,6 +33,7 @@ export function Layout() {
         <Link to="/" className="marca"><span aria-hidden="true">🤝</span>{NOME_SITE}</Link>
         <Acessibilidade />
       </header>
+      <AvisoOficial />
       <nav className="nav" aria-label="Menu principal">
         {LINKS.map((l) => (
           <NavLink key={l.para} to={l.para} end={l.para === '/'}>
@@ -44,10 +46,10 @@ export function Layout() {
         <Outlet />
         <footer className="rodape">
           <p>
-            Dados conferidos em {dataBR(DATA_ATUALIZACAO)} em fontes oficiais do governo.{' '}
-            <Link to="/sobre">Sobre e fontes</Link>
+            Guia independente e gratuito, sem ligação com o governo. Valores e regras conferidos em{' '}
+            {dataBR(DATA_ATUALIZACAO)} nas fontes oficiais. <Link to="/fontes">Ver fontes</Link> · <Link to="/sobre">Sobre</Link>
           </p>
-          <p>Este site não é do governo. É um guia gratuito e não pede seus dados: tudo fica no seu aparelho.</p>
+          <p>Não pedimos seus dados: as respostas ficam só no seu aparelho.</p>
         </footer>
       </main>
     </>

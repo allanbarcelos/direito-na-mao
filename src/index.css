@@ -112,6 +112,9 @@ a { color: var(--azul); text-underline-offset: 3px; }
 }
 .pular:focus { left: 8px; top: 8px; }
 
+/* O foco no <main> é programático (troca de página); não precisa de contorno. */
+main:focus, #fontes:focus { outline: none; }
+
 .conteudo { max-width: 960px; margin: 0 auto; padding: 16px 16px 120px; }
 
 /* ---------- topo ---------- */
@@ -131,6 +134,14 @@ a { color: var(--azul); text-underline-offset: 3px; }
 }
 .acessibilidade button[aria-pressed='true'] { background: #fff; color: #08502b; }
 :root[data-contraste='alto'] .acessibilidade button { border-color: #fff; }
+
+.aviso-oficial {
+  background: var(--amarelo-claro); color: var(--texto);
+  border-bottom: 2px solid var(--amarelo);
+  padding: 8px 16px; font-size: 0.9rem;
+}
+.aviso-oficial p { max-width: 960px; margin: 0 auto; }
+:root[data-contraste='alto'] .aviso-oficial { border-bottom-color: #fff; }
 
 /* ---------- navegação ---------- */
 .nav {

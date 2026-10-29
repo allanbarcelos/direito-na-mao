@@ -22,6 +22,7 @@ export default function App() {
           <Route path="onde-pedir" element={<OndePedir />} />
           <Route path="gastos" element={<Gastos />} />
           <Route path="sobre" element={<Sobre />} />
+          <Route path="fontes" element={<Sobre />} />
           <Route path="*" element={<Inicio />} />
         </Route>
       </Routes>
