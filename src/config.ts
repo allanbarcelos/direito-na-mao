@@ -4,3 +4,4 @@ export const SLOGAN = 'Descubra quais benefícios do governo você e sua famíli
 
 export const AUTORIA = { nome: 'Barcelos.Dev', url: 'https://barcelos.dev' }
 export const REPOSITORIO = 'https://github.com/allanbarcelos/direito-na-mao'
+export const SITE_URL = 'https://allanbarcelos.github.io/direito-na-mao/'

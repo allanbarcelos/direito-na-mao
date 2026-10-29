@@ -176,6 +176,14 @@ As páginas também foram verificadas com axe-core (WCAG 2 A e AA) em tela de ce
 - transições desligadas para quem prefere menos movimento
 - versão para impressão do resultado, para levar ao CRAS
 
+## PDF da simulação
+
+No fim da simulação, o botão "Baixar PDF para levar ao CRAS" gera um PDF no próprio aparelho, sem enviar nada para a internet. Em celulares que permitem, aparece também "Compartilhar PDF" (WhatsApp, e-mail etc.).
+
+O PDF começa com um aviso em destaque de que não é um documento oficial e só serve para ajudar a pessoa no atendimento. Depois vêm o resultado com o motivo de cada benefício, perguntas prontas para fazer no CRAS (montadas a partir do resultado), onde ir, os dados informados e as fontes oficiais (leis, decretos e páginas .gov.br) de cada benefício e dos valores de referência, com links clicáveis. Todas as páginas têm o rodapé "Simulação NÃO OFICIAL".
+
+O conteúdo é montado em `src/pdf/conteudo.ts` (função pura, testada) e desenhado em `src/pdf/gerar.ts` com o jsPDF, que só é baixado quando a pessoa toca no botão.
+
 ## Offline e privacidade
 
 O site é um PWA: depois do primeiro acesso funciona sem internet e pode ser instalado no celular. Novas versões são baixadas sozinhas.

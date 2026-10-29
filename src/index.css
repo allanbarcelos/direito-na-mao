@@ -298,3 +298,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-sp
 .rodape .autoria { margin-top: 12px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 20px; }
 .rodape .autoria a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; }
 .rodape .autoria .bi { font-size: 1.2rem; }
+
+.botoes-pdf { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.botoes-pdf .botao { flex: 1 1 240px; }
+.botoes-pdf .rotulo { flex-basis: 100%; margin: 0; font-size: 0.9rem; }

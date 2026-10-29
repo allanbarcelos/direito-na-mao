@@ -4,3 +4,13 @@ export function ehCelular(nav: Navigator = navigator, toque = window.matchMedia(
   if (dica !== undefined) return dica || (toque && /Android|iPad|Tablet/i.test(nav.userAgent))
   return /Android|iPhone|iPad|iPod|Mobile|Tablet/i.test(nav.userAgent)
 }
+
+/** Compartilhar arquivos (WhatsApp, e-mail...) só existe em alguns navegadores, quase sempre no celular. */
+export function podeCompartilharArquivo(): boolean {
+  try {
+    const teste = new File([''], 'teste.pdf', { type: 'application/pdf' })
+    return typeof navigator.canShare === 'function' && navigator.canShare({ files: [teste] })
+  } catch {
+    return false
+  }
+}

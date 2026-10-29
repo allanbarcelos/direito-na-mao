@@ -1,6 +1,7 @@
 import { Icone } from '../componentes/Icone'
 import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { BotoesPdf } from '../componentes/BotoesPdf'
 import { Ouvir } from '../componentes/Ouvir'
 import { simular } from '../calculo/simulador'
 import type { BeneficioCalculado, Cenario } from '../calculo/tipos'
@@ -55,8 +56,9 @@ export function Resultado() {
         </p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }} className="nao-imprimir">
           <Ouvir texto={fala} rotulo="Ouvir resultado" />
-          <button type="button" className="ouvir" onClick={() => window.print()}><Icone nome="printer-fill" /> Imprimir para levar ao CRAS</button>
+          <button type="button" className="ouvir" onClick={() => window.print()}><Icone nome="printer-fill" /> Imprimir</button>
         </div>
+        <BotoesPdf sim={sim} resultado={r} />
       </section>
 
       {r.dicas.length > 0 && (
