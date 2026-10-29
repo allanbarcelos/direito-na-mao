@@ -294,3 +294,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-sp
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+.rodape .autoria { margin-top: 12px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 20px; }
+.rodape .autoria a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; }
+.rodape .autoria .bi { font-size: 1.2rem; }

@@ -1,7 +1,7 @@
 import { Icone } from './Icone'
 import { useEffect, useRef } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
-import { NOME_SITE } from '../config'
+import { AUTORIA, NOME_SITE, REPOSITORIO } from '../config'
 import { DATA_ATUALIZACAO } from '../servicos/referencias'
 import { dataBR } from '../lib/formatar'
 import { pararFala } from '../lib/falar'
@@ -51,6 +51,12 @@ export function Layout() {
             {dataBR(DATA_ATUALIZACAO)} nas fontes oficiais. <Link to="/fontes">Ver fontes</Link> · <Link to="/sobre">Sobre</Link>
           </p>
           <p>Não pedimos seus dados: as respostas ficam só no seu aparelho.</p>
+          <p className="autoria">
+            <span>Feito por <a href={AUTORIA.url} target="_blank" rel="noopener noreferrer">{AUTORIA.nome}</a></span>
+            <a href={REPOSITORIO} target="_blank" rel="noopener noreferrer">
+              <Icone nome="github" /> Código aberto no GitHub
+            </a>
+          </p>
         </footer>
       </main>
     </>
