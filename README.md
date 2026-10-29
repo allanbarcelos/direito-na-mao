@@ -134,12 +134,12 @@ Para cada programa, um modelo de IA pesquisa só em domínios oficiais (`gov.br`
 
 Antes de gravar qualquer coisa, `scripts/revisao/validacao.ts` confere a resposta: formato do esquema, id e estado inalterados, fonte oficial para toda mudança e para todo programa novo. Programas que o modelo não consegue confirmar viram `confirmar` e saem da soma da simulação. Respostas que não passam na validação são descartadas e listadas no relatório.
 
-No fim, o workflow roda lint, testes e build com os dados novos e abre um Pull Request (branch `revisao/programas`) com um relatório das mudanças e das fontes. O site só muda quando alguém revisa e aprova o PR.
+No fim, o workflow roda lint, testes e build com os dados novos. Se tudo passar, faz o commit dos JSON direto na `main` e publica o site em seguida. Se algo falhar, nada é gravado e a execução fica marcada com erro. O relatório das mudanças e das fontes vai na mensagem do commit e no resumo da execução, na aba Actions. Vale ler esse relatório depois de cada execução: como não há revisão antes de publicar, um erro da IA que passe pela validação vai direto para o site.
 
 Configuração no GitHub, uma vez só:
 
 1. Em **Settings > Secrets and variables > Actions**, crie o secret `ANTHROPIC_API_KEY`.
-2. Em **Settings > Actions > General > Workflow permissions**, marque **Allow GitHub Actions to create and approve pull requests**.
+2. Em **Settings > Actions > General > Workflow permissions**, deixe **Read and write permissions**. Se a `main` tiver regra de proteção que bloqueia push direto, o commit do workflow vai falhar.
 
 Para rodar localmente (gasta créditos da API):
 
@@ -190,7 +190,7 @@ Como o build usa caminhos relativos e `HashRouter`, a pasta `dist/` também func
 
 ## Limitações
 
-- Os valores valem para a data de `dataAtualizacao` em `referencias.json`. A revisão automática ajuda a manter os dados em dia, mas depende de revisão humana do PR.
+- Os valores valem para a data de `dataAtualizacao` em `referencias.json`. A revisão automática publica sem revisão humana prévia; confira o relatório de cada execução.
 - Programas municipais não estão incluídos.
 - Alguns programas estaduais estão como `confirmar` por falta de fonte oficial recente.
 - O total do Bolsa Família em 2026 cobre só os meses em que o governo divulgou a folha.

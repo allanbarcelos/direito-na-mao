@@ -5,7 +5,7 @@
  *                      [--programas id1,id2] [--ufs CE,MA] [--concorrencia 3] [--seco]
  *
  * Lê e grava somente src/dados/*.json. Escreve um relatório em .revisao/relatorio.md,
- * usado como corpo do Pull Request. Nada é publicado sem revisão humana.
+ * usado como mensagem do commit e no resumo da execução no GitHub Actions.
  */
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { parseArgs } from 'node:util'
@@ -164,7 +164,7 @@ function escreverRelatorio() {
   const linhas: string[] = [`## Revisão automática dos programas (${hoje})`, '']
   linhas.push(
     'Revisão feita com IA pesquisando apenas em domínios oficiais (gov.br, leg.br, jus.br). ' +
-    '**Confira cada mudança na fonte antes de aprovar.** Programas novos e mudanças de valor afetam diretamente a simulação.', '')
+    'Cada mudança traz a fonte que a comprova. Programas novos e mudanças de valor afetam diretamente a simulação.', '')
   linhas.push(`Modo: \`${modo}\` · programas conferidos: ${rel.conferidos} · atualizados: ${rel.atualizados.length} · novos: ${rel.novos.length} · erros: ${rel.erros.length}`, '')
 
   const tabelaMudancas = (ms: Mudanca[]) => [

@@ -1,7 +1,8 @@
 name: Revisão dos programas com IA
 
 # Confere valores, regras e fontes de todos os programas, procura programas novos
-# e abre um Pull Request com as mudanças. Nada vai para o site sem revisão humana.
+# e faz o commit dos dados atualizados direto na main, publicando o site em seguida.
+# O commit só acontece se lint, testes e build passarem com os dados novos.
 
 on:
   schedule:
@@ -25,7 +26,8 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: revisao-programas
@@ -35,6 +37,8 @@ jobs:
   revisar:
     runs-on: ubuntu-latest
     timeout-minutes: 180
+    outputs:
+      commit: ${{ steps.commit.outputs.sha }}
     steps:
       - uses: actions/checkout@v4
 
@@ -55,34 +59,39 @@ jobs:
           UFS: ${{ inputs.ufs }}
         run: npm run revisar -- --modo "$MODO" --programas "$PROGRAMAS" --ufs "$UFS"
 
+      - name: Mostrar o relatório no resumo da execução
+        if: always()
+        run: |
+          if [ -f .revisao/relatorio.md ]; then cat .revisao/relatorio.md >> "$GITHUB_STEP_SUMMARY"; fi
+
+      # Trava de segurança: com dados que quebram o site, nada é gravado.
       - name: Lint, testes e build com os dados novos
-        id: verificacao
-        continue-on-error: true
         run: npm run lint && npm test && npm run build
 
-      - name: Anotar o resultado da verificação no relatório
-        env:
-          RESULTADO: ${{ steps.verificacao.outcome }}
+      - name: Commit na main
+        id: commit
         run: |
+          if git diff --quiet -- src/dados; then
+            echo "Nenhum dado mudou."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/dados/*.json
           {
+            echo "Atualiza dados dos programas (revisão automática)"
             echo
-            if [ "$RESULTADO" = "success" ]; then
-              echo "Lint, testes e build passaram com os dados novos."
-            else
-              echo "**Atenção: lint, testes ou build falharam com os dados novos.** Veja o log da execução antes de aprovar."
-            fi
-            echo
-            echo "Execução: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          } >> .revisao/relatorio.md
-          cat .revisao/relatorio.md >> "$GITHUB_STEP_SUMMARY"
+            head -c 60000 .revisao/relatorio.md
+          } > /tmp/mensagem.txt
+          git commit -F /tmp/mensagem.txt
+          # Se a main andou durante a revisão, aplica o commit por cima.
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      - name: Abrir Pull Request
-        uses: peter-evans/create-pull-request@v7
-        with:
-          branch: revisao/programas
-          delete-branch: true
-          add-paths: src/dados/*.json
-          commit-message: Atualiza dados dos programas (revisão automática)
-          title: Revisão automática dos programas
-          body-path: .revisao/relatorio.md
-          labels: revisao-automatica
+  publicar:
+    needs: revisar
+    if: needs.revisar.outputs.commit != ''
+    uses: ./.github/workflows/deploy.yml
+    with:
+      ref: ${{ needs.revisar.outputs.commit }}

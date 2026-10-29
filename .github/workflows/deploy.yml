@@ -5,6 +5,14 @@ on:
     branches: [main]
   # Permite rodar manualmente pela aba "Actions".
   workflow_dispatch:
+  # Chamado pela revisão automática depois do commit dos dados novos
+  # (push feito pelo token do Actions não dispara este workflow sozinho).
+  workflow_call:
+    inputs:
+      ref:
+        description: Commit a publicar
+        type: string
+        required: false
 
 permissions:
   contents: read
@@ -21,6 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.sha }}
 
       - uses: actions/setup-node@v4
         with:
