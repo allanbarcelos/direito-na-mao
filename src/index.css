@@ -258,7 +258,7 @@ a { color: var(--azul); text-underline-offset: 3px; }
 table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
 th, td { padding: 8px 10px; border-bottom: 1px solid var(--borda); text-align: left; }
 th { font-weight: 800; }
-td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .tabela-rolagem { overflow-x: auto; }
 
 .busca { margin-bottom: 14px; }
