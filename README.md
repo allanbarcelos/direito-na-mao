@@ -60,6 +60,17 @@ npm run icones   # regenera os ícones PNG a partir de public/icone.svg
 
 O build usa caminhos relativos e `HashRouter`, então a pasta `dist/` funciona em qualquer hospedagem estática (GitHub Pages, Netlify, Vercel, servidor comum).
 
+## Deploy no GitHub Pages
+
+O workflow `.github/workflows/deploy.yml` roda lint, testes e build a cada push na `main` e publica a pasta `dist/` no GitHub Pages. Também dá para rodar manualmente pela aba **Actions**.
+
+Configuração (uma vez só):
+
+1. Envie o repositório para o GitHub.
+2. Em **Settings → Pages → Build and deployment → Source**, escolha **GitHub Actions**.
+
+O site fica em `https://<usuario>.github.io/<repositorio>/`. Como os caminhos são relativos, funciona com qualquer nome de repositório, sem configuração extra.
+
 ## Aviso
 
 Este é um guia independente, não é um site do governo. O resultado é uma simulação; quem concede o benefício é o órgão responsável após análise do cadastro.
