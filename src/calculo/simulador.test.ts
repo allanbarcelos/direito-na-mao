@@ -8,7 +8,7 @@ import type { Familia, Pessoa } from './tipos'
 let seq = 0
 function pessoa(p: Partial<Pessoa> = {}): Pessoa {
   return {
-    id: `p${++seq}`, nome: '', idade: 30, deficiencia: false, zika: false, gestante: false,
+    id: `p${++seq}`, nome: '', idade: 30, sexo: '', deficiencia: false, zika: false, gestante: false,
     amamentando: false, escola: 'nao', integral: false, rendaTrabalho: 0, trabalhoFormal: false,
     aposentadoria: 0, recebeBPC: false, saiuDoBPC: false, pescador: false, agricultor: false,
     indigenaQuilombola: false, responsavel: false, ...p,
@@ -70,7 +70,7 @@ describe('otimização: família grande do exemplo', () => {
   // 2 adultos (mãe gestante), 3 crianças 0–6, 3 jovens 7–17 (2 no ensino médio),
   // 1 idoso e 1 adulto com deficiência — 10 pessoas, sem outra renda.
   const membros = () => [
-    pessoa({ gestante: true, responsavel: true }), pessoa(),
+    pessoa({ sexo: 'feminino', gestante: true, responsavel: true }), pessoa({ sexo: 'masculino' }),
     pessoa({ idade: 1 }), pessoa({ idade: 3 }), pessoa({ idade: 5 }),
     pessoa({ idade: 10 }), pessoa({ idade: 15, escola: 'medio' }), pessoa({ idade: 16, escola: 'medio' }),
     pessoa({ idade: 70 }), pessoa({ idade: 40, deficiencia: true }),
@@ -96,10 +96,26 @@ describe('otimização: família grande do exemplo', () => {
   })
 
   it('em Goiás, compara com programas que excluem o Bolsa Família', () => {
-    const r = simular(familia([pessoa({ responsavel: true }), pessoa({ idade: 2 })], { uf: 'GO' }))
+    const r = simular(familia([pessoa({ sexo: 'feminino', responsavel: true }), pessoa({ idade: 2 })], { uf: 'GO' }))
     // Com BF: mínimo + primeira infância. Sem BF: Mães de Goiás. Deve ficar com o BF.
     expect(r.melhor.comBolsaFamilia).toBe(true)
     expect(r.alternativas.some((c) => c.beneficios.some((b) => b.programaId === 'go-maes-de-goias'))).toBe(true)
+  })
+})
+
+describe('programas só para mulheres', () => {
+  const casa = (sexo: 'feminino' | 'masculino') =>
+    familia([pessoa({ sexo, responsavel: true }), pessoa({ idade: 2 })], { uf: 'PE', recebeBolsaFamilia: true })
+
+  it('Mães de Pernambuco exige mulher responsável pela família', () => {
+    expect(soma(simular(casa('feminino')), 'pe-maes-de-pernambuco')).toBe(valorDe('pe-maes-de-pernambuco'))
+    expect(soma(simular(casa('masculino')), 'pe-maes-de-pernambuco')).toBe(0)
+  })
+
+  it('Mães de Goiás não vale para pai responsável', () => {
+    const pai = familia([pessoa({ sexo: 'masculino', responsavel: true }), pessoa({ idade: 2 })], { uf: 'GO' })
+    const r = simular(pai)
+    expect([r.melhor, ...r.alternativas].some((c) => c.beneficios.some((b) => b.programaId === 'go-maes-de-goias'))).toBe(false)
   })
 })
 

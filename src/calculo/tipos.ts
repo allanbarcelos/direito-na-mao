@@ -2,10 +2,14 @@ import type { UF } from '../servicos/tipos'
 
 export type Escola = 'nao' | 'fundamental' | 'medio' | 'faculdade'
 
+/** Sexo como consta no documento (é o que o CadÚnico e os programas usam). '' = ainda não respondido. */
+export type Sexo = 'feminino' | 'masculino' | ''
+
 export interface Pessoa {
   id: string
   nome: string
   idade: number
+  sexo: Sexo
   deficiencia: boolean
   /** Deficiência causada pelo vírus Zika (síndrome congênita). */
   zika: boolean
@@ -27,7 +31,7 @@ export interface Pessoa {
   agricultor: boolean
   /** Indígena ou quilombola. */
   indigenaQuilombola: boolean
-  /** Mulher responsável pela família. */
+  /** Responsável pela família (cuida da casa e das contas), de qualquer sexo. */
   responsavel: boolean
 }
 

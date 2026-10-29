@@ -27,6 +27,8 @@ export const ValorEsquema = z.union([z.number().nonnegative(), z.object({ sm: z.
 export const FiltroPessoaEsquema = z.object({
   idadeMin: z.number().int().nonnegative(),
   idadeMax: z.number().int().nonnegative(),
+  /** Sexo como consta no documento. */
+  sexo: z.enum(['feminino', 'masculino']),
   escola: z.array(z.enum(['nao', 'fundamental', 'medio', 'faculdade'])).min(1),
   integral: z.boolean(),
   deficiencia: z.boolean(),

@@ -6,7 +6,7 @@ import { avaliarCalculo, resolver } from './interpretador'
 
 let seq = 0
 const pessoa = (p: Partial<Pessoa> = {}): Pessoa => ({
-  id: `i${++seq}`, nome: '', idade: 30, deficiencia: false, zika: false, gestante: false,
+  id: `i${++seq}`, nome: '', idade: 30, sexo: '', deficiencia: false, zika: false, gestante: false,
   amamentando: false, escola: 'nao', integral: false, rendaTrabalho: 0, trabalhoFormal: false,
   aposentadoria: 0, recebeBPC: false, saiuDoBPC: false, pescador: false, agricultor: false,
   indigenaQuilombola: false, responsavel: false, ...p,
@@ -55,6 +55,13 @@ describe('interpretador de regras do JSON', () => {
     const comBPC = ctx([pessoa({ recebeBPC: true })], { rendaPorPessoa: 50 })
     expect(avaliarCalculo(c, comBPC)[0].motivo).toBe('tem BPC')
     expect(avaliarCalculo(c, ctx([pessoa()], { rendaPorPessoa: 500 }))).toEqual([])
+  })
+
+  it('filtra por sexo quando o programa pede', () => {
+    const c: Calculo = { tipo: 'familia', valor: 300, motivo: 'm', requisitos: { alguem: [{ sexo: 'feminino', responsavel: true }] } }
+    expect(avaliarCalculo(c, ctx([pessoa({ sexo: 'feminino', responsavel: true })]))).toHaveLength(1)
+    expect(avaliarCalculo(c, ctx([pessoa({ sexo: 'masculino', responsavel: true })]))).toHaveLength(0)
+    expect(avaliarCalculo(c, ctx([pessoa({ responsavel: true })]))).toHaveLength(0)
   })
 
   it('respeita exigir ou excluir o Bolsa Família', () => {

@@ -14,7 +14,7 @@ let seq = 0
 export function novaPessoa(idade = 30): Pessoa {
   seq += 1
   return {
-    id: `${Date.now().toString(36)}-${seq}`, nome: '', idade, deficiencia: false, zika: false,
+    id: `${Date.now().toString(36)}-${seq}`, nome: '', idade, sexo: '', deficiencia: false, zika: false,
     gestante: false, amamentando: false, escola: 'nao', integral: false, rendaTrabalho: 0,
     trabalhoFormal: false, aposentadoria: 0, recebeBPC: false, saiuDoBPC: false, pescador: false,
     agricultor: false, indigenaQuilombola: false, responsavel: false,
@@ -59,6 +59,17 @@ export function alterarPessoa(s: Simulacao, indice: number, parcial: Partial<Pes
 
 // ---------- persistência no aparelho ----------
 
-export const carregarSimulacao = () => ler<Simulacao>(CHAVE, simulacaoVazia())
+/**
+ * Simulações salvas antes da pergunta sobre sexo não têm esse campo. Quem estava marcada
+ * como grávida, amamentando ou "mulher responsável" é do sexo feminino; o resto fica em branco.
+ */
+function migrar(s: Simulacao): Simulacao {
+  const pessoas = s.familia.pessoas.map((p) => (p.sexo !== undefined ? p : {
+    ...p, sexo: (p.gestante || p.amamentando || p.responsavel ? 'feminino' : '') as Pessoa['sexo'],
+  }))
+  return { ...s, familia: { ...s.familia, pessoas } }
+}
+
+export const carregarSimulacao = () => migrar(ler<Simulacao>(CHAVE, simulacaoVazia()))
 export const salvarSimulacao = (s: Simulacao) => gravar(CHAVE, s)
 export const limparSimulacao = () => apagar(CHAVE)

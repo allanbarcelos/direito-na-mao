@@ -38,6 +38,7 @@ export function Simulador() {
 
   let tela: React.ReactNode
   let podeAvancar = true
+  let falta = ''
   if (passo === 0) {
     podeAvancar = s.modo !== ''
     tela = <PassoModo modo={s.modo} onChange={escolherModo} />
@@ -48,6 +49,8 @@ export function Simulador() {
     tela = <PassoQuantidade quantidade={n} onChange={mudarQuantidade} />
   } else if (passo < passoFamilia) {
     const i = passo - PRIMEIRA_PESSOA
+    podeAvancar = pessoas[i].sexo !== ''
+    falta = 'Responda o sexo da pessoa para continuar.'
     tela = <PassoPessoa key={pessoas[i].id} pessoa={pessoas[i]} indice={i} total={n} onChange={(p) => mudarPessoa(i, p)} />
   } else {
     tela = <PassoFamilia familia={s.familia} onChange={mudarFamilia} />
@@ -60,6 +63,7 @@ export function Simulador() {
       </div>
       <p className="rotulo">Passo {passo + 1} de {total}</p>
       <section className="cartao">{tela}</section>
+      {!podeAvancar && falta && <p className="rotulo" role="status">{falta}</p>}
       <div className="navegacao-passos">
         {passo > 0 && <button type="button" className="botao secundario" onClick={voltar}><Icone nome="arrow-left" /> Voltar</button>}
         <button type="button" className="botao" onClick={avancar} disabled={!podeAvancar}>

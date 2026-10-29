@@ -15,6 +15,7 @@ export function pessoaBate(p: Pessoa, f: FiltroPessoa, ctx: Contexto): boolean {
   if (f.idadeMin !== undefined && p.idade < f.idadeMin) return false
   if (f.idadeMax !== undefined && p.idade > f.idadeMax) return false
   if (f.escola && !f.escola.includes(p.escola)) return false
+  if (f.sexo !== undefined && p.sexo !== f.sexo) return false
   if (f.rendaTrabalhoMax !== undefined && p.rendaTrabalho > resolver(f.rendaTrabalhoMax)) return false
   if (f.semBPC !== undefined && f.semBPC === recebeOuPedeBPC(p, ctx)) return false
   if (f.semAposentadoria !== undefined && f.semAposentadoria !== (p.aposentadoria === 0)) return false

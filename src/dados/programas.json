@@ -995,6 +995,7 @@
           "bolsaFamilia": "exige",
           "alguem": [
             {
+              "sexo": "feminino",
               "responsavel": true,
               "trabalhoFormal": false
             }
@@ -2003,6 +2004,7 @@
               "idadeMax": 6
             },
             {
+              "sexo": "feminino",
               "responsavel": true
             }
           ],

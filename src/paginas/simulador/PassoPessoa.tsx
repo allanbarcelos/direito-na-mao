@@ -15,7 +15,7 @@ export function PassoPessoa({ pessoa: p, indice, total, onChange }: {
 }) {
   const rotuloIdade = indice === 0 ? 'Sua idade (anos)' : `Idade de ${p.nome.trim() || `pessoa ${indice + 1}`} (anos)`
   const adulto = p.idade >= 16
-  const podeGestar = p.idade >= 10 && p.idade <= 55
+  const podeGestar = p.sexo === 'feminino' && p.idade >= 10 && p.idade <= 55
   return (
     <>
       <TituloPergunta
@@ -30,6 +30,15 @@ export function PassoPessoa({ pessoa: p, indice, total, onChange }: {
       )}
       <Contador rotulo={rotuloIdade} valor={p.idade} min={0} max={120} onChange={(idade) => onChange({ idade })} />
 
+      <div className="campo" role="group" aria-labelledby={`sexo-${p.id}`}>
+        <span id={`sexo-${p.id}`} className="pergunta" style={{ fontSize: '1.1rem' }}>Sexo (como está no documento)</span>
+        <span className="ajuda">Alguns programas são só para mulheres. Use o que aparece no RG ou na certidão.</span>
+        <div className="opcoes">
+          <button type="button" className="opcao" aria-pressed={p.sexo === 'feminino'} onClick={() => onChange({ sexo: 'feminino' })}>Feminino</button>
+          <button type="button" className="opcao" aria-pressed={p.sexo === 'masculino'} onClick={() => onChange({ sexo: 'masculino', gestante: false, amamentando: false })}>Masculino</button>
+        </div>
+      </div>
+
       <SimNao icone="person-wheelchair" pergunta="Tem alguma deficiência?" ajuda="Física, mental, intelectual, visual, auditiva ou doença que impede a vida normal por mais de 2 anos." valor={p.deficiencia} onChange={(v) => onChange({ deficiencia: v, zika: v && p.zika })} />
       {p.deficiencia && (
         <SimNao icone="bug-fill" pergunta="A deficiência foi causada pelo vírus Zika?" valor={p.zika} onChange={(v) => onChange({ zika: v })} />
@@ -41,7 +50,7 @@ export function PassoPessoa({ pessoa: p, indice, total, onChange }: {
         </>
       )}
       {adulto && (
-        <SimNao icone="person-fill" pergunta="É mãe ou mulher responsável pela família?" valor={p.responsavel} onChange={(v) => onChange({ responsavel: v })} />
+        <SimNao icone="person-fill" pergunta="É a pessoa responsável pela família?" ajuda="Quem cuida da casa e das contas. No CadÚnico é chamada de “responsável familiar”." valor={p.responsavel} onChange={(v) => onChange({ responsavel: v })} />
       )}
 
       {p.idade >= 4 && (
