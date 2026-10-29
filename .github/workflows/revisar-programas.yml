@@ -1,0 +1,88 @@
+name: Revisão dos programas com IA
+
+# Confere valores, regras e fontes de todos os programas, procura programas novos
+# e abre um Pull Request com as mudanças. Nada vai para o site sem revisão humana.
+
+on:
+  schedule:
+    # Dia 1 de cada mês, 7h no horário de Brasília (10h UTC).
+    - cron: '0 10 1 * *'
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: O que revisar
+        type: choice
+        default: tudo
+        options: [tudo, revisar, novos, referencias, gastos]
+      programas:
+        description: Ids dos programas, separados por vírgula (vazio = todos)
+        required: false
+        default: ''
+      ufs:
+        description: Siglas dos estados, separadas por vírgula (vazio = todos)
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: revisao-programas
+  cancel-in-progress: false
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Revisar com IA
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Entradas passam por variáveis de ambiente, nunca direto no comando.
+          MODO: ${{ inputs.modo || 'tudo' }}
+          PROGRAMAS: ${{ inputs.programas }}
+          UFS: ${{ inputs.ufs }}
+        run: npm run revisar -- --modo "$MODO" --programas "$PROGRAMAS" --ufs "$UFS"
+
+      - name: Lint, testes e build com os dados novos
+        id: verificacao
+        continue-on-error: true
+        run: npm run lint && npm test && npm run build
+
+      - name: Anotar o resultado da verificação no relatório
+        env:
+          RESULTADO: ${{ steps.verificacao.outcome }}
+        run: |
+          {
+            echo
+            if [ "$RESULTADO" = "success" ]; then
+              echo "Lint, testes e build passaram com os dados novos."
+            else
+              echo "**Atenção: lint, testes ou build falharam com os dados novos.** Veja o log da execução antes de aprovar."
+            fi
+            echo
+            echo "Execução: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          } >> .revisao/relatorio.md
+          cat .revisao/relatorio.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Abrir Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: revisao/programas
+          delete-branch: true
+          add-paths: src/dados/*.json
+          commit-message: Atualiza dados dos programas (revisão automática)
+          title: Revisão automática dos programas
+          body-path: .revisao/relatorio.md
+          labels: revisao-automatica

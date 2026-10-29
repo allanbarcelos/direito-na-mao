@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Relatório da revisão automática (vira o corpo do PR)
+.revisao/
