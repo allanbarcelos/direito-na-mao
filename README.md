@@ -26,6 +26,7 @@ Guia gratuito e acessível dos programas de transferência de renda do Brasil, f
 16. [Convenções do projeto](#convenções-do-projeto)
 17. [Problemas comuns](#problemas-comuns)
 18. [Limitações conhecidas](#limitações-conhecidas)
+19. [Licença](#licença)
 
 ---
 
@@ -384,3 +385,11 @@ $env:NODE_OPTIONS='--use-system-ca'; npm install
 - O total do Bolsa Família em 2026 cobre apenas os meses em que o governo divulgou a folha (janeiro a junho).
 - O Gás do Povo e a Tarifa Social aparecem sem valor em reais, porque não há fonte oficial para o preço do botijão ou da tarifa.
 - A simulação usa as informações declaradas. A concessão real depende de análise do órgão responsável (CadÚnico, perícia do INSS, vagas dos programas estaduais).
+
+---
+
+## Licença
+
+Distribuído sob a licença [MIT](LICENSE). © 2026 Allan Barcelos.
+
+A licença vale para o código. Leis, decretos e dados públicos citados pertencem aos respectivos órgãos e continuam sendo de domínio público.
