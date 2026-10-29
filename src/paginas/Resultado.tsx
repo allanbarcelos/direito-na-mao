@@ -1,3 +1,4 @@
+import { Icone } from '../componentes/Icone'
 import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Ouvir } from '../componentes/Ouvir'
@@ -54,13 +55,13 @@ export function Resultado() {
         </p>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }} className="nao-imprimir">
           <Ouvir texto={fala} rotulo="Ouvir resultado" />
-          <button type="button" className="ouvir" onClick={() => window.print()}>🖨️ Imprimir para levar ao CRAS</button>
+          <button type="button" className="ouvir" onClick={() => window.print()}><Icone nome="printer-fill" /> Imprimir para levar ao CRAS</button>
         </div>
       </section>
 
       {r.dicas.length > 0 && (
         <section className="cartao aviso">
-          <h2>📝 O que fazer agora</h2>
+          <h2><Icone nome="list-ol" /> O que fazer agora</h2>
           <ol className="passos">
             {r.dicas.map((d) => <li key={d}>{d}</li>)}
           </ol>
@@ -69,14 +70,14 @@ export function Resultado() {
 
       {emDinheiro.length > 0 && (
         <section>
-          <h2>💵 Benefícios em dinheiro</h2>
+          <h2><Icone nome="cash-stack" /> Benefícios em dinheiro</h2>
           {emDinheiro.map((b, i) => <CartaoBeneficio key={`${b.programaId}-${i}`} b={b} />)}
         </section>
       )}
 
       {outros.length > 0 && (
         <section>
-          <h2>🎁 Outros direitos (produto, desconto ou valor especial)</h2>
+          <h2><Icone nome="gift-fill" /> Outros direitos (produto, desconto ou valor especial)</h2>
           {outros.map((b, i) => <CartaoBeneficio key={`${b.programaId}-${i}`} b={b} />)}
         </section>
       )}
@@ -90,11 +91,11 @@ export function Resultado() {
 
       {onde.length > 0 && (
         <section className="cartao">
-          <h2>📍 Onde ir</h2>
+          <h2><Icone nome="geo-alt-fill" /> Onde ir</h2>
           <ul className="lista-simples">
             {onde.map((id) => LOCAL_POR_ID[id]).filter(Boolean).map((l) => (
               <li key={l.id}>
-                <strong>{l.icone} {l.nome}</strong>{l.telefone ? <> — ligue <a href={`tel:${l.telefone}`}>{l.telefone}</a></> : ''}
+                <strong><Icone nome={l.icone} /> {l.nome}</strong>{l.telefone ? <> — ligue <a href={`tel:${l.telefone}`}>{l.telefone}</a></> : ''}
                 <br />{l.comoAchar}
               </li>
             ))}
@@ -105,7 +106,7 @@ export function Resultado() {
 
       {r.alternativas.length > 0 && (
         <section className="cartao">
-          <h2>⚖️ Comparamos outras combinações</h2>
+          <h2><Icone nome="arrow-left-right" /> Comparamos outras combinações</h2>
           <p>O sistema testou {r.alternativas.length + 1} formas de pedir os benefícios e mostrou acima a que rende mais todo mês. Veja as outras:</p>
           <div className="tabela-rolagem" tabIndex={0} role="region" aria-label="Tabela (pode rolar para o lado)">
             <table>
@@ -121,22 +122,22 @@ export function Resultado() {
 
       {r.aConfirmar.length > 0 && (
         <section className="cartao">
-          <h2>❓ Pode existir no seu estado — confirme</h2>
+          <h2><Icone nome="question-circle-fill" /> Pode existir no seu estado — confirme</h2>
           <p>Estes programas estão em lei, mas não achamos prova de pagamento recente. <strong>Não entram na soma.</strong> Pergunte no CRAS.</p>
           {r.aConfirmar.map((b, i) => <CartaoBeneficio key={`${b.programaId}-c${i}`} b={b} />)}
         </section>
       )}
 
       <section className="cartao">
-        <h2>ℹ️ Importante</h2>
+        <h2><Icone nome="info-circle-fill" /> Importante</h2>
         <ul className="lista-simples">
           <li>Isto é uma <strong>simulação</strong>. Quem decide é o órgão que paga, depois de analisar o cadastro e os documentos.</li>
           <li>Na soma mensal, benefícios pagos por ano ou por temporada aparecem como média por mês.</li>
           <li>Responda sempre a verdade no CadÚnico: informação falsa faz perder o benefício e pode obrigar a devolver o dinheiro.</li>
         </ul>
         <div className="navegacao-passos nao-imprimir">
-          <Link to="/simular" className="botao secundario">✏️ Mudar respostas</Link>
-          <Link to="/programas" className="botao secundario">📋 Ver todos os programas</Link>
+          <Link to="/simular" className="botao secundario"><Icone nome="pencil-fill" /> Mudar respostas</Link>
+          <Link to="/programas" className="botao secundario"><Icone nome="card-list" /> Ver todos os programas</Link>
         </div>
       </section>
     </>
@@ -147,7 +148,7 @@ function CartaoBeneficio({ b }: { b: BeneficioCalculado }) {
   const p = programa(b.programaId)
   return (
     <article className="cartao beneficio">
-      <span className="icone" aria-hidden="true">{b.icone}</span>
+      <span className="icone"><Icone nome={b.icone} /></span>
       <h3 style={{ margin: 0 }}>
         {b.nome}{b.pessoa ? <span className="rotulo"> — {b.pessoa}</span> : null}
       </h3>
@@ -159,7 +160,7 @@ function CartaoBeneficio({ b }: { b: BeneficioCalculado }) {
       <div>
         <p style={{ margin: '6px 0 0' }}>{b.motivo}</p>
         {b.avisos.length > 0 && <ul>{b.avisos.map((a) => <li key={a}>{a}</li>)}</ul>}
-        {p && <p style={{ margin: '8px 0 0' }}><Link to={`/programas/${p.id}`}>Como pedir e fontes oficiais →</Link></p>}
+        {p && <p style={{ margin: '8px 0 0' }}><Link to={`/programas/${p.id}`}>Como pedir e fontes oficiais <Icone nome="arrow-right" /></Link></p>}
       </div>
     </article>
   )
@@ -168,7 +169,7 @@ function CartaoBeneficio({ b }: { b: BeneficioCalculado }) {
 function LinhaCenario({ c, melhor }: { c: Cenario; melhor?: boolean }) {
   return (
     <tr style={melhor ? { fontWeight: 800 } : undefined}>
-      <td>{melhor ? '✅ ' : ''}{c.descricao}</td>
+      <td>{melhor && <><Icone nome="check-circle-fill" /> <span className="sr-only">Melhor opção: </span></>}{c.descricao}</td>
       <td className="num">{brl(c.totalPermanente)}</td>
       <td className="num">{brl(c.totalComTemporarios)}</td>
     </tr>

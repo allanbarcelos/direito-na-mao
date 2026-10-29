@@ -1,3 +1,4 @@
+import { Icone } from '../componentes/Icone'
 import { Ouvir } from '../componentes/Ouvir'
 import { APLICATIVOS, CANAIS, LOCAIS } from '../data/locais'
 
@@ -13,7 +14,7 @@ export function OndePedir() {
   const fala = `Para pedir os benefícios, vá ao CRAS da sua cidade e faça o Cadastro Único. Leve: ${DOCUMENTOS.join('; ')}. Telefones gratuitos: Bolsa Família 121, INSS 135, Caixa 111.`
   return (
     <>
-      <h1>📍 Onde pedir</h1>
+      <h1><Icone nome="geo-alt-fill" /> Onde pedir</h1>
       <p><Ouvir texto={fala} rotulo="Ouvir resumo" /></p>
 
       <section className="cartao destaque">
@@ -22,13 +23,13 @@ export function OndePedir() {
         <ul className="lista-simples">{DOCUMENTOS.map((d) => <li key={d}>{d}</li>)}</ul>
         <p>
           <a className="botao" href="https://www.google.com/maps/search/CRAS+perto+de+mim" target="_blank" rel="noopener noreferrer">
-            🗺️ Achar o CRAS mais perto no mapa
+            <Icone nome="map-fill" /> Achar o CRAS mais perto no mapa
           </a>
         </p>
       </section>
 
       <section className="cartao">
-        <h2>☎️ Telefones gratuitos</h2>
+        <h2><Icone nome="telephone-fill" /> Telefones gratuitos</h2>
         <div className="grade">
           {CANAIS.map((c) => (
             <a key={c.numero} href={`tel:${c.numero}`} className="botao secundario" style={{ flexDirection: 'column' }}>
@@ -41,7 +42,7 @@ export function OndePedir() {
       </section>
 
       <section className="cartao">
-        <h2>📱 Aplicativos oficiais</h2>
+        <h2><Icone nome="phone-fill" /> Aplicativos oficiais</h2>
         <ul className="lista-simples">
           {APLICATIVOS.map((a) => (
             <li key={a.nome}><a href={a.url} target="_blank" rel="noopener noreferrer"><strong>{a.nome}</strong></a> — {a.para}</li>
@@ -49,14 +50,14 @@ export function OndePedir() {
         </ul>
       </section>
 
-      <h2>🏢 Lugares</h2>
+      <h2><Icone nome="buildings-fill" /> Lugares</h2>
       <div className="grade">
         {LOCAIS.map((l) => (
           <article key={l.id} className="cartao">
-            <h3><span aria-hidden="true">{l.icone}</span> {l.nome}</h3>
+            <h3><Icone nome={l.icone} /> {l.nome}</h3>
             <p>{l.oQueE}</p>
             <p><strong>Como achar:</strong> {l.comoAchar}</p>
-            {l.telefone && <p><a href={`tel:${l.telefone}`}>📞 Ligar {l.telefone}</a></p>}
+            {l.telefone && <p><a href={`tel:${l.telefone}`}><Icone nome="telephone-fill" /> Ligar {l.telefone}</a></p>}
             {l.link && <p><a href={l.link} target="_blank" rel="noopener noreferrer">Site oficial</a></p>}
           </article>
         ))}

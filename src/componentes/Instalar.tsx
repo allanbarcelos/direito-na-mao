@@ -1,3 +1,4 @@
+import { Icone } from './Icone'
 import { useEffect, useState } from 'react'
 
 interface EventoInstalar extends Event {
@@ -21,7 +22,7 @@ export function Instalar() {
   if (!evento) return null
   return (
     <div className="cartao aviso nao-imprimir">
-      <p><strong>📲 Coloque este site na tela do seu celular.</strong> Ele funciona até sem internet depois de instalado.</p>
+      <p><strong><Icone nome="phone-fill" /> Coloque este site na tela do seu celular.</strong> Ele funciona até sem internet depois de instalado.</p>
       <button
         type="button"
         className="botao"

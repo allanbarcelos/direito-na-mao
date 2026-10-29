@@ -1,3 +1,4 @@
+import { Icone } from './Icone'
 import { useEffect, useRef } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { NOME_SITE } from '../config'
@@ -8,11 +9,11 @@ import { Acessibilidade } from './Acessibilidade'
 import { AvisoOficial } from './AvisoOficial'
 
 const LINKS = [
-  { para: '/', icone: '🏠', texto: 'Início' },
-  { para: '/simular', icone: '🧮', texto: 'Simular' },
-  { para: '/programas', icone: '📋', texto: 'Programas' },
-  { para: '/onde-pedir', icone: '📍', texto: 'Onde pedir' },
-  { para: '/gastos', icone: '📊', texto: 'Gastos' },
+  { para: '/', icone: 'house-fill', texto: 'Início' },
+  { para: '/simular', icone: 'calculator-fill', texto: 'Simular' },
+  { para: '/programas', icone: 'card-list', texto: 'Programas' },
+  { para: '/onde-pedir', icone: 'geo-alt-fill', texto: 'Onde pedir' },
+  { para: '/gastos', icone: 'bar-chart-fill', texto: 'Gastos' },
 ]
 
 export function Layout() {
@@ -30,14 +31,14 @@ export function Layout() {
     <>
       <a href="#conteudo" className="pular">Pular para o conteúdo</a>
       <header className="topo">
-        <Link to="/" className="marca"><span aria-hidden="true">🤝</span>{NOME_SITE}</Link>
+        <Link to="/" className="marca"><img src={`${import.meta.env.BASE_URL}icone.svg`} alt="" />{NOME_SITE}</Link>
         <Acessibilidade />
       </header>
       <AvisoOficial />
       <nav className="nav" aria-label="Menu principal">
         {LINKS.map((l) => (
           <NavLink key={l.para} to={l.para} end={l.para === '/'}>
-            <span aria-hidden="true">{l.icone}</span>
+            <Icone nome={l.icone} />
             {l.texto}
           </NavLink>
         ))}

@@ -1,3 +1,4 @@
+import { Icone } from '../componentes/Icone'
 import { Link } from 'react-router-dom'
 import { Instalar } from '../componentes/Instalar'
 import { Ouvir } from '../componentes/Ouvir'
@@ -18,14 +19,14 @@ export function Inicio() {
         <p style={{ fontSize: '1.2rem' }}>{intro}</p>
         <p><Ouvir texto={intro} rotulo="Ouvir explicação" /></p>
         <Link to="/simular" className="botao grande">
-          <span aria-hidden="true">🧮</span> Descobrir meus benefícios
+          <Icone nome="calculator-fill" /> Descobrir meus benefícios
         </Link>
       </section>
 
       <Instalar />
 
       <section className="cartao" aria-labelledby="gasto-titulo">
-        <h2 id="gasto-titulo">💰 Quanto o Brasil já gastou</h2>
+        <h2 id="gasto-titulo"><Icone nome="cash-coin" /> Quanto o Brasil já gastou</h2>
         <p className="rotulo">{gasto.titulo} — {gasto.periodo}</p>
         <p className="valor-grande">{brlGrande(gasto.valor)}</p>
         <p>{gasto.detalhe}</p>
@@ -55,7 +56,7 @@ export function Inicio() {
       </section>
 
       <section className="cartao aviso">
-        <h2>⭐ O primeiro passo é sempre o mesmo</h2>
+        <h2><Icone nome="star-fill" /> O primeiro passo é sempre o mesmo</h2>
         <p>
           Quase todo benefício depende do <strong>Cadastro Único (CadÚnico)</strong>. Ele é feito de graça no
           <strong> CRAS</strong> da sua cidade. Leve o CPF de todas as pessoas da casa e um comprovante de endereço.
@@ -64,7 +65,7 @@ export function Inicio() {
       </section>
 
       <section className="cartao">
-        <h2>⚠️ Cuidado com golpes</h2>
+        <h2><Icone nome="exclamation-triangle-fill" /> Cuidado com golpes</h2>
         <ul className="lista-simples">
           <li>Nenhum benefício do governo cobra taxa para ser liberado.</li>
           <li>Não passe sua senha do gov.br, do Caixa Tem ou do Meu INSS para ninguém.</li>

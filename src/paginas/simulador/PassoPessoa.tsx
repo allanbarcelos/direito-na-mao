@@ -1,11 +1,12 @@
+import { Icone } from '../../componentes/Icone'
 import type { Escola, Pessoa } from '../../calculo/tipos'
 import { CampoDinheiro, Contador, SimNao, TituloPergunta } from '../../componentes/Perguntas'
 
 const ESCOLAS: { valor: Escola; texto: string; icone: string }[] = [
-  { valor: 'nao', texto: 'Não estuda', icone: '🚫' },
-  { valor: 'fundamental', texto: 'Ensino fundamental', icone: '✏️' },
-  { valor: 'medio', texto: 'Ensino médio', icone: '🎒' },
-  { valor: 'faculdade', texto: 'Faculdade', icone: '🎓' },
+  { valor: 'nao', texto: 'Não estuda', icone: 'x-circle' },
+  { valor: 'fundamental', texto: 'Ensino fundamental', icone: 'pencil-fill' },
+  { valor: 'medio', texto: 'Ensino médio', icone: 'backpack' },
+  { valor: 'faculdade', texto: 'Faculdade', icone: 'mortarboard-fill' },
 ]
 
 /** Perguntas sobre uma pessoa da casa. Só mostra o que faz sentido para a idade. */
@@ -29,18 +30,18 @@ export function PassoPessoa({ pessoa: p, indice, total, onChange }: {
       )}
       <Contador rotulo={rotuloIdade} valor={p.idade} min={0} max={120} onChange={(idade) => onChange({ idade })} />
 
-      <SimNao icone="♿" pergunta="Tem alguma deficiência?" ajuda="Física, mental, intelectual, visual, auditiva ou doença que impede a vida normal por mais de 2 anos." valor={p.deficiencia} onChange={(v) => onChange({ deficiencia: v, zika: v && p.zika })} />
+      <SimNao icone="person-wheelchair" pergunta="Tem alguma deficiência?" ajuda="Física, mental, intelectual, visual, auditiva ou doença que impede a vida normal por mais de 2 anos." valor={p.deficiencia} onChange={(v) => onChange({ deficiencia: v, zika: v && p.zika })} />
       {p.deficiencia && (
-        <SimNao icone="🦟" pergunta="A deficiência foi causada pelo vírus Zika?" valor={p.zika} onChange={(v) => onChange({ zika: v })} />
+        <SimNao icone="bug-fill" pergunta="A deficiência foi causada pelo vírus Zika?" valor={p.zika} onChange={(v) => onChange({ zika: v })} />
       )}
       {podeGestar && (
         <>
-          <SimNao icone="🤰" pergunta="Está grávida?" valor={p.gestante} onChange={(v) => onChange({ gestante: v })} />
-          <SimNao icone="🤱" pergunta="Está amamentando?" valor={p.amamentando} onChange={(v) => onChange({ amamentando: v })} />
+          <SimNao icone="heart-pulse" pergunta="Está grávida?" valor={p.gestante} onChange={(v) => onChange({ gestante: v })} />
+          <SimNao icone="heart-fill" pergunta="Está amamentando?" valor={p.amamentando} onChange={(v) => onChange({ amamentando: v })} />
         </>
       )}
       {adulto && (
-        <SimNao icone="👩" pergunta="É mãe ou mulher responsável pela família?" valor={p.responsavel} onChange={(v) => onChange({ responsavel: v })} />
+        <SimNao icone="person-fill" pergunta="É mãe ou mulher responsável pela família?" valor={p.responsavel} onChange={(v) => onChange({ responsavel: v })} />
       )}
 
       {p.idade >= 4 && (
@@ -49,17 +50,17 @@ export function PassoPessoa({ pessoa: p, indice, total, onChange }: {
           <div className="opcoes">
             {ESCOLAS.map((e) => (
               <button key={e.valor} type="button" className="opcao" aria-pressed={p.escola === e.valor} onClick={() => onChange({ escola: e.valor })}>
-                <span aria-hidden="true">{e.icone}</span> {e.texto}
+                <Icone nome={e.icone} /> {e.texto}
               </button>
             ))}
           </div>
         </div>
       )}
       {p.escola === 'medio' && (
-        <SimNao icone="⏰" pergunta="Estuda em tempo integral ou curso técnico?" valor={p.integral} onChange={(v) => onChange({ integral: v })} />
+        <SimNao icone="clock-fill" pergunta="Estuda em tempo integral ou curso técnico?" valor={p.integral} onChange={(v) => onChange({ integral: v })} />
       )}
       {p.escola === 'faculdade' && (
-        <SimNao icone="🪶" pergunta="É indígena ou quilombola?" valor={p.indigenaQuilombola} onChange={(v) => onChange({ indigenaQuilombola: v })} />
+        <SimNao icone="feather" pergunta="É indígena ou quilombola?" valor={p.indigenaQuilombola} onChange={(v) => onChange({ indigenaQuilombola: v })} />
       )}
 
       {p.idade >= 14 && (
@@ -71,10 +72,10 @@ export function PassoPessoa({ pessoa: p, indice, total, onChange }: {
             onChange={(rendaTrabalho) => onChange({ rendaTrabalho })}
           />
           {p.rendaTrabalho > 0 && (
-            <SimNao icone="📘" pergunta="Trabalha com carteira assinada?" valor={p.trabalhoFormal} onChange={(v) => onChange({ trabalhoFormal: v })} />
+            <SimNao icone="person-vcard-fill" pergunta="Trabalha com carteira assinada?" valor={p.trabalhoFormal} onChange={(v) => onChange({ trabalhoFormal: v })} />
           )}
           {p.deficiencia && p.trabalhoFormal && (
-            <SimNao icone="🔁" pergunta="Recebia BPC antes de começar nesse trabalho?" valor={p.saiuDoBPC} onChange={(v) => onChange({ saiuDoBPC: v })} />
+            <SimNao icone="arrow-repeat" pergunta="Recebia BPC antes de começar nesse trabalho?" valor={p.saiuDoBPC} onChange={(v) => onChange({ saiuDoBPC: v })} />
           )}
           <CampoDinheiro
             rotulo="Recebe aposentadoria ou pensão do INSS? Quanto por mês? (R$)"
@@ -85,12 +86,12 @@ export function PassoPessoa({ pessoa: p, indice, total, onChange }: {
         </>
       )}
       {(p.idade >= 65 || p.deficiencia) && (
-        <SimNao icone="🧓" pergunta="Já recebe o BPC (LOAS)?" valor={p.recebeBPC} onChange={(v) => onChange({ recebeBPC: v })} />
+        <SimNao icone="person-heart" pergunta="Já recebe o BPC (LOAS)?" valor={p.recebeBPC} onChange={(v) => onChange({ recebeBPC: v })} />
       )}
       {adulto && (
         <>
-          <SimNao icone="🎣" pergunta="É pescador(a) artesanal?" valor={p.pescador} onChange={(v) => onChange({ pescador: v })} />
-          <SimNao icone="🌽" pergunta="Trabalha na roça (agricultura familiar)?" valor={p.agricultor} onChange={(v) => onChange({ agricultor: v })} />
+          <SimNao icone="water" pergunta="É pescador(a) artesanal?" valor={p.pescador} onChange={(v) => onChange({ pescador: v })} />
+          <SimNao icone="flower1" pergunta="Trabalha na roça (agricultura familiar)?" valor={p.agricultor} onChange={(v) => onChange({ agricultor: v })} />
         </>
       )}
     </>

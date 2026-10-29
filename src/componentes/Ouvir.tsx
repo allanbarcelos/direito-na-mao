@@ -1,3 +1,4 @@
+import { Icone } from './Icone'
 import { useEffect, useState } from 'react'
 import { falar, pararFala, podeFalar } from '../lib/falar'
 
@@ -21,7 +22,7 @@ export function Ouvir({ texto, rotulo = 'Ouvir' }: { texto: string; rotulo?: str
         }
       }}
     >
-      <span aria-hidden="true">{falando ? '⏹️' : '🔊'}</span>
+      <Icone nome={falando ? 'stop-circle-fill' : 'volume-up-fill'} />
       {falando ? 'Parar' : rotulo}
     </button>
   )

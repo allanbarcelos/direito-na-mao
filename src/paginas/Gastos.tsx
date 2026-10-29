@@ -1,3 +1,4 @@
+import { Icone } from '../componentes/Icone'
 import { Ouvir } from '../componentes/Ouvir'
 import { BOLSA_FAMILIA_2026, DESTAQUES, NUMEROS } from '../data/gastos'
 import { brl, brlGrande, dataBR, numero } from '../lib/formatar'
@@ -10,7 +11,7 @@ export function Gastos() {
   const fala = DESTAQUES.map((d) => `${d.titulo}, ${d.periodo}: ${brlGrande(d.valor)}.`).join(' ')
   return (
     <>
-      <h1>📊 Quanto o Brasil gasta com benefícios</h1>
+      <h1><Icone nome="bar-chart-fill" /> Quanto o Brasil gasta com benefícios</h1>
       <p>Números oficiais mais recentes publicados pelo governo federal. Cada valor tem o link da fonte.</p>
       <p><Ouvir texto={fala} rotulo="Ouvir números" /></p>
 

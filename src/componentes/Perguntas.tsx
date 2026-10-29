@@ -1,3 +1,4 @@
+import { Icone } from './Icone'
 import { useId } from 'react'
 import { Ouvir } from './Ouvir'
 
@@ -9,7 +10,7 @@ export function SimNao({ icone, pergunta, valor, onChange, ajuda }: {
   return (
     <div className="sim-nao" role="group" aria-labelledby={id}>
       <div className="texto">
-        <span aria-hidden="true">{icone}</span>
+        <Icone nome={icone} />
         <span id={id}>
           {pergunta}
           {ajuda && <><br /><small className="rotulo">{ajuda}</small></>}

@@ -4,6 +4,7 @@ import { registerSW } from 'virtual:pwa-register'
 import App from './App'
 import '@fontsource/atkinson-hyperlegible/latin-400.css'
 import '@fontsource/atkinson-hyperlegible/latin-700.css'
+import 'bootstrap-icons/font/bootstrap-icons.min.css'
 import './index.css'
 
 registerSW({ immediate: true })

@@ -36,7 +36,7 @@ const AVISO_VAGAS = 'O número de vagas é limitado e a seleção é feita pelo 
 export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
   // ===================== NORDESTE =====================
   {
-    id: 'ce-ceara-sem-fome', uf: 'CE', nome: 'Cartão Ceará Sem Fome', esfera: 'estadual', categoria: 'dinheiro', icone: '🍽️',
+    id: 'ce-ceara-sem-fome', uf: 'CE', nome: 'Cartão Ceará Sem Fome', esfera: 'estadual', categoria: 'dinheiro', icone: 'basket2-fill',
     resumo: 'R$ 300 por mês para comprar comida, para famílias do Bolsa Família em extrema pobreza.',
     valorTexto: 'R$ 300 por mês',
     paraQuem: ['Famílias do Bolsa Família no Ceará com renda de até R$ 218 por pessoa (contando o Bolsa Família).', 'Prioridade para mulheres chefes de família com crianças até 14 anos.'],
@@ -52,7 +52,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'ce-mais-infancia', uf: 'CE', nome: 'Cartão Mais Infância Ceará', esfera: 'estadual', categoria: 'dinheiro', icone: '🧒',
+    id: 'ce-mais-infancia', uf: 'CE', nome: 'Cartão Mais Infância Ceará', esfera: 'estadual', categoria: 'dinheiro', icone: 'balloon-heart-fill',
     resumo: 'R$ 100 por mês para famílias muito pobres com crianças pequenas.',
     valorTexto: 'R$ 100 por mês',
     paraQuem: ['Famílias no CadÚnico com crianças de 0 a 5 anos e 11 meses.', 'Renda de até R$ 89 por pessoa, sem contar o Bolsa Família.'],
@@ -65,7 +65,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'ma-livre-da-fome', uf: 'MA', nome: 'Maranhão Livre da Fome', esfera: 'estadual', categoria: 'dinheiro', icone: '🍽️',
+    id: 'ma-livre-da-fome', uf: 'MA', nome: 'Maranhão Livre da Fome', esfera: 'estadual', categoria: 'dinheiro', icone: 'basket2-fill',
     resumo: 'Complemento ao Bolsa Família para famílias que continuam na extrema pobreza.',
     valorTexto: 'R$ 200 + R$ 50 por criança de 0 a 6 anos',
     paraQuem: ['Famílias do Bolsa Família no Maranhão com renda de até R$ 218 por pessoa.', 'Moradores dos municípios atendidos (o programa está sendo ampliado).'],
@@ -80,7 +80,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
     },
   },
   {
-    id: 'pe-maes-de-pernambuco', uf: 'PE', nome: 'Mães de Pernambuco', esfera: 'estadual', categoria: 'dinheiro', icone: '🤱',
+    id: 'pe-maes-de-pernambuco', uf: 'PE', nome: 'Mães de Pernambuco', esfera: 'estadual', categoria: 'dinheiro', icone: 'heart-fill',
     resumo: 'R$ 300 por mês para mães do Bolsa Família com filhos pequenos ou grávidas.',
     valorTexto: 'R$ 300 por mês por família',
     paraQuem: ['Mulher responsável pela família no Bolsa Família.', 'Grávida ou com filho de 0 a 6 anos.', 'Sem emprego com carteira assinada.'],
@@ -96,7 +96,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
     },
   },
   {
-    id: 'al-cria', uf: 'AL', nome: 'Cartão CRIA (Criança Alagoana)', esfera: 'estadual', categoria: 'dinheiro', icone: '👶',
+    id: 'al-cria', uf: 'AL', nome: 'Cartão CRIA (Criança Alagoana)', esfera: 'estadual', categoria: 'dinheiro', icone: 'balloon-fill',
     resumo: 'R$ 150 por mês para gestantes e famílias pobres com crianças de até 6 anos.',
     valorTexto: 'R$ 150 por mês + 13ª parcela',
     paraQuem: ['Gestantes ou responsáveis por crianças de 0 a 6 anos.', 'CadÚnico com renda de até R$ 218 por pessoa.'],
@@ -109,7 +109,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'al-escola-10', uf: 'AL', nome: 'Cartão Escola 10', esfera: 'estadual', categoria: 'poupanca', icone: '🎒',
+    id: 'al-escola-10', uf: 'AL', nome: 'Cartão Escola 10', esfera: 'estadual', categoria: 'poupanca', icone: 'backpack',
     resumo: 'Bolsa para todos os alunos do ensino médio da rede estadual de Alagoas, sem limite de renda.',
     valorTexto: 'R$ 100 por mês (R$ 150 integral) + R$ 2.000 ao concluir',
     paraQuem: ['Estudantes do ensino médio e EJA da rede estadual de Alagoas.', 'Não depende da renda da família.'],
@@ -120,7 +120,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
     avaliar: (ctx) => porEstudante(ctx, (p) => p.escola === 'medio', (p) => (p.integral ? 150 : 100), 'Estuda no ensino médio da rede estadual.', ['Precisa de 90% de presença.', 'Mais R$ 2.000 ao concluir o ensino médio.']),
   },
   {
-    id: 'ba-bolsa-presenca', uf: 'BA', nome: 'Bolsa Presença', esfera: 'estadual', categoria: 'dinheiro', icone: '🏫',
+    id: 'ba-bolsa-presenca', uf: 'BA', nome: 'Bolsa Presença', esfera: 'estadual', categoria: 'dinheiro', icone: 'book-fill',
     resumo: 'Dinheiro para famílias pobres manterem os filhos na escola estadual da Bahia.',
     valorTexto: 'R$ 150 por família + R$ 50 por estudante a mais',
     paraQuem: ['Famílias no CadÚnico em situação de pobreza com estudantes na rede estadual da Bahia.'],
@@ -136,7 +136,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
     },
   },
   {
-    id: 'ba-mais-futuro', uf: 'BA', nome: 'Mais Futuro', esfera: 'estadual', categoria: 'dinheiro', icone: '🎓',
+    id: 'ba-mais-futuro', uf: 'BA', nome: 'Mais Futuro', esfera: 'estadual', categoria: 'dinheiro', icone: 'mortarboard-fill',
     resumo: 'Bolsa para estudantes de baixa renda das universidades estaduais da Bahia.',
     valorTexto: 'R$ 400 por mês (R$ 800 se mora longe da família)',
     paraQuem: ['Alunos da UNEB, UESB, UEFS ou UESC com renda de até meio salário mínimo por pessoa.'],
@@ -149,7 +149,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'se-cmais', uf: 'SE', nome: 'CMais (Cartão Mais Inclusão)', esfera: 'estadual', categoria: 'dinheiro', icone: '💳',
+    id: 'se-cmais', uf: 'SE', nome: 'CMais (Cartão Mais Inclusão)', esfera: 'estadual', categoria: 'dinheiro', icone: 'credit-card-2-front-fill',
     resumo: 'Conjunto de cartões de ajuda do governo de Sergipe para crianças, mães e mulheres.',
     valorTexto: 'R$ 130 por mês (Ser Criança)',
     paraQuem: ['CMais Ser Criança: famílias no CadÚnico com crianças de 0 a 6 anos.', 'Outras linhas: mães solo, mulheres vítimas de violência, feirantes.'],
@@ -163,7 +163,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'pi-cartao-social', uf: 'PI', nome: 'Cartão Social Piauí', esfera: 'estadual', categoria: 'dinheiro', icone: '💳',
+    id: 'pi-cartao-social', uf: 'PI', nome: 'Cartão Social Piauí', esfera: 'estadual', categoria: 'dinheiro', icone: 'credit-card-2-front-fill',
     resumo: 'Seis parcelas de R$ 200 por ano para famílias muito pobres do Piauí.',
     valorTexto: '6 × R$ 200 por ano',
     paraQuem: ['Famílias no CadÚnico com renda de até R$ 218 por pessoa, em municípios que aderiram.'],
@@ -176,7 +176,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'pb-cartao-alimentacao', uf: 'PB', nome: 'Cartão Alimentação Paraíba', esfera: 'estadual', categoria: 'dinheiro', icone: '🍽️',
+    id: 'pb-cartao-alimentacao', uf: 'PB', nome: 'Cartão Alimentação Paraíba', esfera: 'estadual', categoria: 'dinheiro', icone: 'basket2-fill',
     resumo: 'R$ 50 por mês para comprar comida, para famílias em vulnerabilidade na Paraíba.',
     valorTexto: 'R$ 50 por mês',
     paraQuem: ['Famílias no CadÚnico em situação de vulnerabilidade na Paraíba.'],
@@ -190,7 +190,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
   },
   // ===================== NORTE =====================
   {
-    id: 'am-auxilio-estadual', uf: 'AM', nome: 'Auxílio Estadual Permanente', esfera: 'estadual', categoria: 'dinheiro', icone: '💳',
+    id: 'am-auxilio-estadual', uf: 'AM', nome: 'Auxílio Estadual Permanente', esfera: 'estadual', categoria: 'dinheiro', icone: 'credit-card-2-front-fill',
     resumo: 'R$ 150 por mês para famílias pobres do Amazonas.',
     valorTexto: 'R$ 150 por mês',
     paraQuem: ['Famílias no CadÚnico em situação de pobreza ou extrema pobreza no Amazonas.'],
@@ -203,7 +203,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'to-cartao-alimento', uf: 'TO', nome: 'Cartão AlimenTO', esfera: 'estadual', categoria: 'dinheiro', icone: '🍽️',
+    id: 'to-cartao-alimento', uf: 'TO', nome: 'Cartão AlimenTO', esfera: 'estadual', categoria: 'dinheiro', icone: 'basket2-fill',
     resumo: 'R$ 250 por mês para comprar comida, por 12 meses.',
     valorTexto: 'R$ 250 por mês',
     paraQuem: ['Famílias no CadÚnico, moradoras do Tocantins, selecionadas pelo estado (cerca de 7 mil).'],
@@ -216,7 +216,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'rr-cesta-da-familia', uf: 'RR', nome: 'Cesta da Família', esfera: 'estadual', categoria: 'dinheiro', icone: '🧺',
+    id: 'rr-cesta-da-familia', uf: 'RR', nome: 'Cesta da Família', esfera: 'estadual', categoria: 'dinheiro', icone: 'basket-fill',
     resumo: 'R$ 200 por mês em cartão (ou cesta básica) para famílias de baixa renda de Roraima.',
     valorTexto: 'R$ 200 por mês',
     paraQuem: ['Famílias com renda de até meio salário mínimo por pessoa em Roraima.'],
@@ -229,7 +229,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'ap-renda-viver-melhor', uf: 'AP', nome: 'Renda para Viver Melhor', esfera: 'estadual', categoria: 'dinheiro', icone: '💳',
+    id: 'ap-renda-viver-melhor', uf: 'AP', nome: 'Renda para Viver Melhor', esfera: 'estadual', categoria: 'dinheiro', icone: 'credit-card-2-front-fill',
     resumo: 'Pela lei, meio salário mínimo por mês para famílias muito pobres do Amapá.',
     valorTexto: 'Meio salário mínimo por mês (pela lei)',
     paraQuem: ['Famílias com renda de até 1/4 do salário mínimo por pessoa.'],
@@ -244,7 +244,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
   },
   // ===================== SUDESTE =====================
   {
-    id: 'sp-superacao', uf: 'SP', nome: 'SuperAção SP', esfera: 'estadual', categoria: 'dinheiro', icone: '🚀',
+    id: 'sp-superacao', uf: 'SP', nome: 'SuperAção SP', esfera: 'estadual', categoria: 'dinheiro', icone: 'rocket-takeoff-fill',
     resumo: 'Dinheiro por pessoa da família, mais bônus por curso e emprego, para sair da pobreza.',
     valorTexto: 'R$ 150,33 por pessoa, por mês',
     paraQuem: ['Famílias no CadÚnico com renda de até R$ 218 por pessoa, nos municípios participantes.'],
@@ -263,7 +263,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
     },
   },
   {
-    id: 'es-bolsa-capixaba', uf: 'ES', nome: 'Bolsa Capixaba', esfera: 'estadual', categoria: 'dinheiro', icone: '💳',
+    id: 'es-bolsa-capixaba', uf: 'ES', nome: 'Bolsa Capixaba', esfera: 'estadual', categoria: 'dinheiro', icone: 'credit-card-2-front-fill',
     resumo: 'Dinheiro todo mês para famílias muito pobres do Espírito Santo que NÃO recebem Bolsa Família.',
     valorTexto: 'De R$ 50 a R$ 600 por mês (varia)',
     paraQuem: ['Famílias no CadÚnico com renda de até R$ 155 por pessoa.', 'Que não recebem Bolsa Família.'],
@@ -277,7 +277,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
   },
   // ===================== SUL =====================
   {
-    id: 'pr-comida-boa', uf: 'PR', nome: 'Cartão Comida Boa', esfera: 'estadual', categoria: 'dinheiro', icone: '🍽️',
+    id: 'pr-comida-boa', uf: 'PR', nome: 'Cartão Comida Boa', esfera: 'estadual', categoria: 'dinheiro', icone: 'basket2-fill',
     resumo: 'R$ 80 por mês para comprar comida, para famílias pobres do Paraná.',
     valorTexto: 'R$ 80 por mês',
     paraQuem: ['Famílias no CadÚnico em pobreza ou extrema pobreza no Paraná.', 'Prioridade para quem não recebe Bolsa Família.'],
@@ -290,7 +290,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'rs-todo-jovem-na-escola', uf: 'RS', nome: 'Todo Jovem na Escola', esfera: 'estadual', categoria: 'poupanca', icone: '🎒',
+    id: 'rs-todo-jovem-na-escola', uf: 'RS', nome: 'Todo Jovem na Escola', esfera: 'estadual', categoria: 'poupanca', icone: 'backpack',
     resumo: 'Bolsa mensal para estudantes de baixa renda do ensino médio estadual do RS.',
     valorTexto: 'R$ 150 por mês (R$ 225 integral ou técnico)',
     paraQuem: ['Estudantes do ensino médio estadual até 21 anos (EJA até 29).', 'Família no CadÚnico com renda de até R$ 660 por pessoa.'],
@@ -303,7 +303,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'sc-bolsa-estudante', uf: 'SC', nome: 'Bolsa Estudante', esfera: 'estadual', categoria: 'dinheiro', icone: '🎒',
+    id: 'sc-bolsa-estudante', uf: 'SC', nome: 'Bolsa Estudante', esfera: 'estadual', categoria: 'dinheiro', icone: 'backpack',
     resumo: 'Bolsa para estudantes do ensino médio estadual de famílias do CadÚnico em Santa Catarina.',
     valorTexto: 'R$ 568,18 por mês (11 meses)',
     paraQuem: ['Estudantes do ensino médio ou EJA da rede estadual com família no CadÚnico.', 'No máximo 2 por família.'],
@@ -316,7 +316,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
   },
   // ===================== CENTRO-OESTE =====================
   {
-    id: 'ms-mais-social', uf: 'MS', nome: 'Mais Social', esfera: 'estadual', categoria: 'dinheiro', icone: '💳',
+    id: 'ms-mais-social', uf: 'MS', nome: 'Mais Social', esfera: 'estadual', categoria: 'dinheiro', icone: 'credit-card-2-front-fill',
     resumo: 'R$ 450 por mês em cartão para comida, gás e higiene, para famílias de baixa renda de MS.',
     valorTexto: 'R$ 450 por mês',
     paraQuem: ['Famílias no CadÚnico com renda de até meio salário mínimo por pessoa.'],
@@ -329,7 +329,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'mt-ser-familia', uf: 'MT', nome: 'Ser Família', esfera: 'estadual', categoria: 'dinheiro', icone: '💳',
+    id: 'mt-ser-familia', uf: 'MT', nome: 'Ser Família', esfera: 'estadual', categoria: 'dinheiro', icone: 'credit-card-2-front-fill',
     resumo: 'Cartões de ajuda mensal para famílias em extrema pobreza de Mato Grosso.',
     valorTexto: 'A partir de R$ 150 por mês',
     paraQuem: ['Famílias em extrema pobreza no CadÚnico.', 'Linhas: Família, Criança, Idoso, Mulher, Inclusivo, Indígena.'],
@@ -343,7 +343,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'go-bolsa-estudo', uf: 'GO', nome: 'Bolsa Estudo', esfera: 'estadual', categoria: 'dinheiro', icone: '🎒',
+    id: 'go-bolsa-estudo', uf: 'GO', nome: 'Bolsa Estudo', esfera: 'estadual', categoria: 'dinheiro', icone: 'backpack',
     resumo: 'Bolsa para todos os alunos do 9º ano e do ensino médio da rede estadual de Goiás.',
     valorTexto: 'R$ 130 por mês (R$ 150 integral)',
     paraQuem: ['Alunos do 9º ano e do ensino médio da rede estadual de Goiás.', 'Não depende da renda.'],
@@ -357,7 +357,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
     avaliar: (ctx) => porEstudante(ctx, (p) => p.escola === 'medio', (p) => (p.integral ? 150 : 130) * 10 / 12, 'Estudante do ensino médio estadual (também vale para o 9º ano).', ['Pago em 10 parcelas; a soma mostra a média mensal.']),
   },
   {
-    id: 'go-maes-de-goias', uf: 'GO', nome: 'Mães de Goiás', esfera: 'estadual', categoria: 'dinheiro', icone: '🤱',
+    id: 'go-maes-de-goias', uf: 'GO', nome: 'Mães de Goiás', esfera: 'estadual', categoria: 'dinheiro', icone: 'heart-fill',
     resumo: 'R$ 300 por mês para mães pobres com filhos pequenos que NÃO recebem Bolsa Família.',
     valorTexto: 'R$ 300 por mês',
     paraQuem: ['Mães com filhos de 0 a 6 anos, no CadÚnico, em situação de pobreza.', 'Que não recebem Bolsa Família.'],
@@ -370,7 +370,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'go-dignidade', uf: 'GO', nome: 'Dignidade', esfera: 'estadual', categoria: 'dinheiro', icone: '🧓',
+    id: 'go-dignidade', uf: 'GO', nome: 'Dignidade', esfera: 'estadual', categoria: 'dinheiro', icone: 'person-heart',
     resumo: 'R$ 300 por mês para pessoas de 60 a 64 anos em situação de pobreza que NÃO recebem Bolsa Família.',
     valorTexto: 'R$ 300 por mês',
     paraQuem: ['Pessoas de 60 a 64 anos, no CadÚnico, em situação de pobreza.', 'Que não recebem Bolsa Família.'],
@@ -384,7 +384,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
         : []),
   },
   {
-    id: 'df-social', uf: 'DF', nome: 'DF Social', esfera: 'estadual', categoria: 'dinheiro', icone: '💳',
+    id: 'df-social', uf: 'DF', nome: 'DF Social', esfera: 'estadual', categoria: 'dinheiro', icone: 'credit-card-2-front-fill',
     resumo: 'R$ 150 por mês para famílias de baixa renda do Distrito Federal.',
     valorTexto: 'R$ 150 por mês',
     paraQuem: ['Famílias no CadÚnico com renda de até meio salário mínimo por pessoa.'],
@@ -397,7 +397,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'df-prato-cheio', uf: 'DF', nome: 'Cartão Prato Cheio', esfera: 'estadual', categoria: 'dinheiro', icone: '🍽️',
+    id: 'df-prato-cheio', uf: 'DF', nome: 'Cartão Prato Cheio', esfera: 'estadual', categoria: 'dinheiro', icone: 'basket2-fill',
     resumo: 'R$ 250 por mês para comprar comida, para famílias em insegurança alimentar no DF.',
     valorTexto: 'R$ 250 por mês, por 18 meses',
     paraQuem: ['Famílias em situação de insegurança alimentar no Distrito Federal.'],
@@ -410,7 +410,7 @@ export const PROGRAMAS_ESTADUAIS: ProgramaEstadual[] = [
       : [],
   },
   {
-    id: 'df-cartao-gas', uf: 'DF', nome: 'Cartão Gás DF', esfera: 'estadual', categoria: 'dinheiro', icone: '🔥',
+    id: 'df-cartao-gas', uf: 'DF', nome: 'Cartão Gás DF', esfera: 'estadual', categoria: 'dinheiro', icone: 'fire',
     resumo: 'R$ 100 a cada 2 meses para ajudar a comprar gás de cozinha no DF.',
     valorTexto: 'R$ 100 a cada 2 meses',
     paraQuem: ['Famílias no CadÚnico de baixa renda no Distrito Federal.'],

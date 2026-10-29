@@ -1,3 +1,4 @@
+import { Icone } from './Icone'
 import { useEffect, useState } from 'react'
 import { gravar, ler } from '../lib/armazenamento'
 
@@ -33,7 +34,7 @@ export function Acessibilidade() {
         A+
       </button>
       <button type="button" aria-pressed={p.contraste} onClick={() => setP({ ...p, contraste: !p.contraste })} aria-label="Alto contraste">
-        <span aria-hidden="true">◐</span> Contraste
+        <Icone nome="circle-half" /> Contraste
       </button>
     </div>
   )

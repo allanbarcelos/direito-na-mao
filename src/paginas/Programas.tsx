@@ -1,3 +1,4 @@
+import { Icone } from '../componentes/Icone'
 import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Fontes } from '../componentes/Fontes'
@@ -10,12 +11,16 @@ import { NOMES_UF, UFS, type Categoria, type Programa, type UF } from '../data/t
 import { carregarSimulacao } from '../estado/simulacao'
 import { dataBR } from '../lib/formatar'
 
-const CATEGORIA: Record<Categoria, string> = {
-  dinheiro: '💵 Dinheiro',
-  poupanca: '🐷 Dinheiro + poupança',
-  produto: '🎁 Produto',
-  desconto: '🏷️ Desconto',
-  trabalhista: '💼 Trabalhista',
+const CATEGORIA: Record<Categoria, { texto: string; icone: string }> = {
+  dinheiro: { texto: 'Dinheiro', icone: 'cash-stack' },
+  poupanca: { texto: 'Dinheiro + poupança', icone: 'piggy-bank-fill' },
+  produto: { texto: 'Produto', icone: 'gift-fill' },
+  desconto: { texto: 'Desconto', icone: 'tag-fill' },
+  trabalhista: { texto: 'Trabalhista', icone: 'briefcase-fill' },
+}
+
+function Categoria({ c }: { c: Categoria }) {
+  return <><Icone nome={CATEGORIA[c].icone} /> {CATEGORIA[c].texto}</>
 }
 
 const semAcento = (s: string) => s.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase()
@@ -37,7 +42,7 @@ export function Programas() {
 
   return (
     <>
-      <h1>📋 Todos os programas</h1>
+      <h1><Icone nome="card-list" /> Todos os programas</h1>
       <p>{PROGRAMAS.length} programas de transferência de renda, com valores de 2026 e links para as fontes oficiais.</p>
 
       <div className="campo busca">
@@ -45,10 +50,10 @@ export function Programas() {
         <input id="busca" type="search" value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Ex.: gás, idoso, estudante" />
       </div>
 
-      <h2>🇧🇷 Federais — valem em todo o Brasil ({federais.length})</h2>
+      <h2><Icone nome="globe-americas" /> Federais — valem em todo o Brasil ({federais.length})</h2>
       <div className="grade">{federais.map((p) => <CartaoPrograma key={p.id} p={p} />)}</div>
 
-      <h2 style={{ marginTop: 24 }}>🗺️ Estaduais</h2>
+      <h2 style={{ marginTop: 24 }}><Icone nome="map-fill" /> Estaduais</h2>
       <div className="campo">
         <label htmlFor="uf">Escolha o estado</label>
         <select id="uf" value={uf} onChange={(e) => setUf(e.target.value as UF | '')}>
@@ -69,10 +74,10 @@ export function Programas() {
 function CartaoPrograma({ p }: { p: Programa }) {
   return (
     <article className="cartao">
-      <h3><span aria-hidden="true">{p.icone}</span> {p.nome}</h3>
+      <h3><Icone nome={p.icone} /> {p.nome}</h3>
       <p>
         {p.uf && <span className="etiqueta">{NOMES_UF[p.uf]}</span>}{' '}
-        <span className="etiqueta verde">{CATEGORIA[p.categoria]}</span>{' '}
+        <span className="etiqueta verde"><Categoria c={p.categoria} /></span>{' '}
         {p.status === 'confirmar' && <span className="etiqueta amarela">Confirmar se ainda paga</span>}
       </p>
       <p><strong>{p.valorTexto}</strong></p>
@@ -101,12 +106,12 @@ export function ProgramaDetalhe() {
 
   return (
     <>
-      <p><Link to="/programas">⬅️ Todos os programas</Link></p>
+      <p><Link to="/programas"><Icone nome="arrow-left" /> Todos os programas</Link></p>
       <section className="cartao destaque">
-        <h1><span aria-hidden="true">{p.icone}</span> {p.nome}</h1>
+        <h1><Icone nome={p.icone} /> {p.nome}</h1>
         <p>
           <span className="etiqueta verde">{p.esfera === 'federal' ? 'Federal' : `Estadual — ${p.uf ? NOMES_UF[p.uf] : ''}`}</span>{' '}
-          <span className="etiqueta">{CATEGORIA[p.categoria]}</span>
+          <span className="etiqueta"><Categoria c={p.categoria} /></span>
         </p>
         <p style={{ fontSize: '1.15rem' }}>{p.resumo}</p>
         <p className="valor-grande" style={{ fontSize: '1.8rem' }}>{p.valorTexto}</p>
@@ -115,21 +120,21 @@ export function ProgramaDetalhe() {
 
       {p.status === 'confirmar' && (
         <div className="cartao aviso">
-          <strong>⚠️ Atenção:</strong> {p.observacao ?? 'Não encontramos prova de pagamento recente.'} Confirme no CRAS ou no site oficial antes de contar com este dinheiro.
+          <strong><Icone nome="exclamation-triangle-fill" /> Atenção:</strong> {p.observacao ?? 'Não encontramos prova de pagamento recente.'} Confirme no CRAS ou no site oficial antes de contar com este dinheiro.
         </div>
       )}
 
       <section className="cartao">
-        <h2>👥 Quem pode receber</h2>
+        <h2><Icone nome="people-fill" /> Quem pode receber</h2>
         <ul className="lista-simples">{p.paraQuem.map((t) => <li key={t}>{t}</li>)}</ul>
-        <h2>📏 Regras e valores</h2>
+        <h2><Icone nome="list-check" /> Regras e valores</h2>
         <ul className="lista-simples">{p.regras.map((t) => <li key={t}>{t}</li>)}</ul>
         <p><strong>Pode somar com o Bolsa Família?</strong> {acumula}</p>
         {p.status === 'ativo' && p.observacao && <p className="rotulo">{p.observacao}</p>}
       </section>
 
       <section className="cartao">
-        <h2>📝 Como pedir</h2>
+        <h2><Icone nome="list-ol" /> Como pedir</h2>
         <ol className="passos">{p.comoPedir.map((t) => <li key={t}>{t}</li>)}</ol>
         {p.onde.length > 0 && (
           <>
@@ -137,7 +142,7 @@ export function ProgramaDetalhe() {
             <ul className="lista-simples">
               {p.onde.map((o) => LOCAL_POR_ID[o]).filter(Boolean).map((l) => (
                 <li key={l.id}>
-                  <strong>{l.icone} {l.nome}</strong>{l.telefone ? <> — <a href={`tel:${l.telefone}`}>ligue {l.telefone}</a></> : ''}. {l.comoAchar}
+                  <strong><Icone nome={l.icone} /> {l.nome}</strong>{l.telefone ? <> — <a href={`tel:${l.telefone}`}>ligue {l.telefone}</a></> : ''}. {l.comoAchar}
                 </li>
               ))}
             </ul>

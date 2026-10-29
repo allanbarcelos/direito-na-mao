@@ -1,3 +1,4 @@
+import { Icone } from '../componentes/Icone'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Fontes } from '../componentes/Fontes'
@@ -29,7 +30,7 @@ export function Sobre() {
     <>
       <h1>Sobre o {NOME_SITE}</h1>
       <section className="cartao aviso">
-        <h2>ℹ️ Este site não é do governo</h2>
+        <h2><Icone nome="info-circle-fill" /> Este site não é do governo</h2>
         <p>
           O {NOME_SITE} é um guia <strong>independente e gratuito</strong>. Não tem ligação com o governo federal,
           com os estados ou com as prefeituras. Ele não faz cadastro, não libera benefício e não pede senha.
@@ -48,7 +49,7 @@ export function Sobre() {
       </section>
 
       <section className="cartao">
-        <h2>🔒 Sua privacidade</h2>
+        <h2><Icone nome="lock-fill" /> Sua privacidade</h2>
         <ul className="lista-simples">
           <li>O cálculo é feito no seu próprio aparelho. <strong>Nenhuma resposta é enviada para a internet.</strong></li>
           <li>Depois de aberto uma vez, o site funciona até sem internet.</li>

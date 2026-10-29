@@ -1,10 +1,11 @@
+import { Icone } from './Icone'
 import type { Fonte } from '../data/tipos'
 import { dataBR } from '../lib/formatar'
 
 export function Fontes({ fontes, titulo = 'Fontes oficiais' }: { fontes: Fonte[]; titulo?: string }) {
   return (
     <section className="fontes" aria-label={titulo}>
-      <h3>📚 {titulo}</h3>
+      <h3><Icone nome="journal-text" /> {titulo}</h3>
       <ul className="lista-simples">
         {fontes.map((f) => (
           <li key={f.url + f.titulo}>

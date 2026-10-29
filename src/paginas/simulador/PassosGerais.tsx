@@ -1,3 +1,4 @@
+import { Icone } from '../../componentes/Icone'
 import type { Familia } from '../../calculo/tipos'
 import { Contador, SimNao, TituloPergunta } from '../../componentes/Perguntas'
 import { NOMES_UF, UFS, type UF } from '../../data/tipos'
@@ -14,10 +15,10 @@ export function PassoModo({ modo, onChange }: { modo: Modo; onChange: (m: Modo) 
       <TituloPergunta texto="Para quem é a simulação?" />
       <div className="opcoes">
         <button type="button" className="opcao" aria-pressed={modo === 'eu'} onClick={() => onChange('eu')}>
-          <span aria-hidden="true">🙋</span> Só para mim
+          <Icone nome="person-fill" /> Só para mim
         </button>
         <button type="button" className="opcao" aria-pressed={modo === 'familia'} onClick={() => onChange('familia')}>
-          <span aria-hidden="true">👨‍👩‍👧‍👦</span> Para minha família
+          <Icone nome="people-fill" /> Para minha família
         </button>
       </div>
       <p className="rotulo" style={{ marginTop: 16 }}>
@@ -63,12 +64,12 @@ export function PassoFamilia({ familia: f, onChange }: { familia: Familia; onCha
           ))}
         </div>
       </div>
-      <SimNao icone="👨‍👩‍👧" pergunta="A família já recebe Bolsa Família hoje?" valor={f.recebeBolsaFamilia} onChange={(v) => onChange({ recebeBolsaFamilia: v })} />
+      <SimNao icone="people-fill" pergunta="A família já recebe Bolsa Família hoje?" valor={f.recebeBolsaFamilia} onChange={(v) => onChange({ recebeBolsaFamilia: v })} />
       {f.uf !== '' && UF_SEMIARIDO.includes(f.uf) && (
-        <SimNao icone="🌵" pergunta="Mora numa cidade do semiárido (sertão)?" valor={f.semiarido} onChange={(v) => onChange({ semiarido: v })} />
+        <SimNao icone="sun-fill" pergunta="Mora numa cidade do semiárido (sertão)?" valor={f.semiarido} onChange={(v) => onChange({ semiarido: v })} />
       )}
       <SimNao
-        icone="🌳"
+        icone="tree-fill"
         pergunta="Mora em reserva, floresta protegida ou assentamento?"
         ajuda="Reserva extrativista, floresta nacional, assentamento do INCRA, comunidade ribeirinha protegida."
         valor={f.reservaOuAssentamento}

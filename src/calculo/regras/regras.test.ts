@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest'
+import ICONES from 'bootstrap-icons/font/bootstrap-icons.json'
 import { PROGRAMAS, programaPorId } from '../../data/catalogo'
+import { LOCAIS } from '../../data/locais'
 import { PROGRAMAS_ESTADUAIS } from '../../data/programasEstaduais'
 import { UFS } from '../../data/tipos'
 import type { Contexto, Regra } from '../tipos'
@@ -30,6 +32,11 @@ describe('catálogo', () => {
     const regras = [REGRA_BPC, ...REGRAS_FEDERAIS, ...UFS.flatMap((uf) => regrasDoEstado(uf))]
     for (const r of regras) expect(programaPorId(r.programaId), r.programaId).toBeDefined()
     expect(programaPorId('bolsa-familia')).toBeDefined()
+  })
+
+  it('todo ícone usado nos dados existe no Bootstrap Icons', () => {
+    const usados = [...PROGRAMAS.map((p) => p.icone), ...LOCAIS.map((l) => l.icone)]
+    for (const nome of usados) expect(ICONES, nome).toHaveProperty(nome)
   })
 
   it('todo programa estadual vira regra do seu estado', () => {

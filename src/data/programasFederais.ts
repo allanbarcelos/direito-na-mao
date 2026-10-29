@@ -5,7 +5,7 @@ const PLANALTO = 'Presidência da República (Planalto)'
 
 export const PROGRAMAS_FEDERAIS: Programa[] = [
   {
-    id: 'bolsa-familia', nome: 'Bolsa Família', esfera: 'federal', categoria: 'dinheiro', icone: '👨‍👩‍👧',
+    id: 'bolsa-familia', nome: 'Bolsa Família', esfera: 'federal', categoria: 'dinheiro', icone: 'people-fill',
     resumo: 'Dinheiro todo mês para famílias com renda baixa. Quanto mais pessoas e crianças, maior o valor.',
     valorTexto: 'Mínimo de R$ 691 por família, por mês',
     paraQuem: [
@@ -37,7 +37,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     ],
   },
   {
-    id: 'bpc', nome: 'BPC — Benefício de Prestação Continuada (LOAS)', esfera: 'federal', categoria: 'dinheiro', icone: '🧓',
+    id: 'bpc', nome: 'BPC — Benefício de Prestação Continuada (LOAS)', esfera: 'federal', categoria: 'dinheiro', icone: 'person-heart',
     resumo: 'Um salário mínimo por mês para idosos a partir de 65 anos ou pessoas com deficiência de família pobre.',
     valorTexto: 'R$ 1.621 por mês (1 salário mínimo)',
     paraQuem: [
@@ -66,7 +66,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     ],
   },
   {
-    id: 'auxilio-inclusao', nome: 'Auxílio-Inclusão', esfera: 'federal', categoria: 'dinheiro', icone: '♿',
+    id: 'auxilio-inclusao', nome: 'Auxílio-Inclusão', esfera: 'federal', categoria: 'dinheiro', icone: 'person-wheelchair',
     resumo: 'Meio salário mínimo por mês para a pessoa com deficiência que sai do BPC para trabalhar com carteira.',
     valorTexto: 'R$ 810,50 por mês',
     paraQuem: [
@@ -82,7 +82,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     ],
   },
   {
-    id: 'pe-de-meia', nome: 'Pé-de-Meia', esfera: 'federal', categoria: 'poupanca', icone: '🎒',
+    id: 'pe-de-meia', nome: 'Pé-de-Meia', esfera: 'federal', categoria: 'poupanca', icone: 'backpack',
     resumo: 'Dinheiro para o estudante do ensino médio público continuar estudando. Parte cai todo mês, parte fica guardada.',
     valorTexto: 'Até R$ 3.000 por ano, R$ 9.200 no ensino médio todo',
     paraQuem: [
@@ -108,7 +108,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     ],
   },
   {
-    id: 'pe-de-meia-licenciaturas', nome: 'Pé-de-Meia Licenciaturas', esfera: 'federal', categoria: 'poupanca', icone: '👩‍🏫',
+    id: 'pe-de-meia-licenciaturas', nome: 'Pé-de-Meia Licenciaturas', esfera: 'federal', categoria: 'poupanca', icone: 'easel',
     resumo: 'Bolsa para quem estuda para ser professor e tirou boa nota no ENEM.',
     valorTexto: 'R$ 1.050 por mês (R$ 700 para usar + R$ 350 guardados)',
     paraQuem: ['Estudantes de licenciatura (cursos para professor) com nota média de 650 ou mais no ENEM.'],
@@ -118,7 +118,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     fontes: [{ titulo: 'Pé-de-Meia Licenciaturas', url: 'https://www.gov.br/mec/pt-br/pe-de-meia-licenciaturas', orgao: 'MEC' }],
   },
   {
-    id: 'bolsa-verde', nome: 'Bolsa Verde', esfera: 'federal', categoria: 'dinheiro', icone: '🌳',
+    id: 'bolsa-verde', nome: 'Bolsa Verde', esfera: 'federal', categoria: 'dinheiro', icone: 'tree-fill',
     resumo: 'Dinheiro a cada 3 meses para famílias que moram em áreas de floresta protegida e ajudam a cuidar dela.',
     valorTexto: 'R$ 600 a cada 3 meses',
     paraQuem: [
@@ -134,7 +134,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     ],
   },
   {
-    id: 'garantia-safra', nome: 'Garantia-Safra', esfera: 'federal', categoria: 'dinheiro', icone: '🌽',
+    id: 'garantia-safra', nome: 'Garantia-Safra', esfera: 'federal', categoria: 'dinheiro', icone: 'flower1',
     resumo: 'Ajuda para o pequeno agricultor do semiárido que perde a plantação por seca ou chuva demais.',
     valorTexto: 'R$ 1.200 por safra perdida',
     paraQuem: [
@@ -155,7 +155,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     ],
   },
   {
-    id: 'seguro-defeso', nome: 'Seguro-Defeso', esfera: 'federal', categoria: 'trabalhista', icone: '🎣',
+    id: 'seguro-defeso', nome: 'Seguro-Defeso', esfera: 'federal', categoria: 'trabalhista', icone: 'water',
     resumo: 'Um salário mínimo por mês para o pescador artesanal nos meses em que a pesca é proibida.',
     valorTexto: 'R$ 1.621 por mês de defeso',
     paraQuem: ['Pescadores artesanais com Registro Geral da Pesca (RGP) que vivem só da pesca.'],
@@ -173,7 +173,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     ],
   },
   {
-    id: 'gas-do-povo', nome: 'Gás do Povo', esfera: 'federal', categoria: 'produto', icone: '🔥',
+    id: 'gas-do-povo', nome: 'Gás do Povo', esfera: 'federal', categoria: 'produto', icone: 'fire',
     resumo: 'Botijão de gás de cozinha de graça para famílias de baixa renda.',
     valorTexto: '4 ou 6 botijões de 13 kg por ano',
     paraQuem: ['Famílias no CadÚnico (atualizado nos últimos 2 anos) com renda de até meio salário mínimo por pessoa.'],
@@ -190,7 +190,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     ],
   },
   {
-    id: 'tarifa-social', nome: 'Tarifa Social de Energia (Luz do Povo)', esfera: 'federal', categoria: 'desconto', icone: '💡',
+    id: 'tarifa-social', nome: 'Tarifa Social de Energia (Luz do Povo)', esfera: 'federal', categoria: 'desconto', icone: 'lightbulb-fill',
     resumo: 'Conta de luz de graça até 80 kWh por mês para famílias de baixa renda.',
     valorTexto: 'Isenção até 80 kWh por mês',
     paraQuem: [
@@ -210,7 +210,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     ],
   },
   {
-    id: 'pensao-zika', nome: 'Pensão especial — vírus Zika', esfera: 'federal', categoria: 'dinheiro', icone: '🩺',
+    id: 'pensao-zika', nome: 'Pensão especial — vírus Zika', esfera: 'federal', categoria: 'dinheiro', icone: 'heart-pulse-fill',
     resumo: 'Pensão para a vida toda e indenização para pessoas com deficiência causada pelo vírus Zika.',
     valorTexto: 'R$ 8.475,55 por mês + R$ 50.000 uma vez',
     paraQuem: ['Pessoas com deficiência permanente causada pela síndrome congênita do vírus Zika.'],
@@ -228,7 +228,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     ],
   },
   {
-    id: 'bolsa-permanencia', nome: 'Bolsa Permanência', esfera: 'federal', categoria: 'dinheiro', icone: '🎓',
+    id: 'bolsa-permanencia', nome: 'Bolsa Permanência', esfera: 'federal', categoria: 'dinheiro', icone: 'mortarboard-fill',
     resumo: 'Bolsa para estudantes indígenas e quilombolas se manterem na universidade federal.',
     valorTexto: 'R$ 1.400 por mês',
     paraQuem: ['Estudantes indígenas e quilombolas matriculados em universidades e institutos federais.'],
@@ -240,7 +240,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     ],
   },
   {
-    id: 'abono-salarial', nome: 'Abono Salarial PIS/PASEP', esfera: 'federal', categoria: 'trabalhista', icone: '💼',
+    id: 'abono-salarial', nome: 'Abono Salarial PIS/PASEP', esfera: 'federal', categoria: 'trabalhista', icone: 'briefcase-fill',
     resumo: 'Até um salário mínimo por ano para quem trabalhou com carteira e ganhou pouco.',
     valorTexto: 'Até R$ 1.621 por ano',
     paraQuem: ['Trabalhadores com carteira assinada há pelo menos 5 anos (PIS/PASEP) e salário médio de até R$ 2.765,93 no ano-base.'],
@@ -250,7 +250,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     fontes: [{ titulo: 'Lei nº 7.998/1990 — Abono e Seguro-Desemprego', url: 'https://www.planalto.gov.br/ccivil_03/leis/l7998.htm', orgao: PLANALTO }],
   },
   {
-    id: 'seguro-desemprego', nome: 'Seguro-Desemprego', esfera: 'federal', categoria: 'trabalhista', icone: '📄',
+    id: 'seguro-desemprego', nome: 'Seguro-Desemprego', esfera: 'federal', categoria: 'trabalhista', icone: 'file-earmark-text-fill',
     resumo: 'Ajuda por alguns meses para quem foi demitido sem justa causa.',
     valorTexto: 'De R$ 1.621 a R$ 2.518,65 por parcela',
     paraQuem: ['Quem trabalhou com carteira e foi demitido sem justa causa.'],
@@ -260,7 +260,7 @@ export const PROGRAMAS_FEDERAIS: Programa[] = [
     fontes: [{ titulo: 'Lei nº 7.998/1990', url: 'https://www.planalto.gov.br/ccivil_03/leis/l7998.htm', orgao: PLANALTO }],
   },
   {
-    id: 'bolsa-atleta', nome: 'Bolsa Atleta', esfera: 'federal', categoria: 'dinheiro', icone: '🏅',
+    id: 'bolsa-atleta', nome: 'Bolsa Atleta', esfera: 'federal', categoria: 'dinheiro', icone: 'trophy-fill',
     resumo: 'Bolsa para atletas com bons resultados em competições. Não depende da renda.',
     valorTexto: 'De R$ 410 a R$ 16.629 por mês',
     paraQuem: ['Atletas que tiveram bons resultados em competições oficiais no ano anterior.'],

@@ -1,3 +1,4 @@
+import { Icone } from '../../componentes/Icone'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSimulacao } from '../../estado/useSimulacao'
@@ -60,14 +61,16 @@ export function Simulador() {
       <p className="rotulo">Passo {passo + 1} de {total}</p>
       <section className="cartao">{tela}</section>
       <div className="navegacao-passos">
-        {passo > 0 && <button type="button" className="botao secundario" onClick={voltar}>⬅️ Voltar</button>}
+        {passo > 0 && <button type="button" className="botao secundario" onClick={voltar}><Icone nome="arrow-left" /> Voltar</button>}
         <button type="button" className="botao" onClick={avancar} disabled={!podeAvancar}>
-          {passo >= passoFamilia ? 'Ver resultado ✅' : 'Continuar ➡️'}
+          {passo >= passoFamilia
+            ? <>Ver resultado <Icone nome="check-circle-fill" /></>
+            : <>Continuar <Icone nome="arrow-right" /></>}
         </button>
       </div>
       {passo === 0 && s.modo !== '' && (
         <p style={{ marginTop: 16 }}>
-          <button type="button" className="ouvir" onClick={recomecar}>🗑️ Começar do zero</button>
+          <button type="button" className="ouvir" onClick={recomecar}><Icone nome="trash-fill" /> Começar do zero</button>
         </p>
       )}
     </>
