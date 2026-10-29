@@ -42,7 +42,7 @@ export function Gastos() {
             </div>
           ))}
         </div>
-        <div className="tabela-rolagem">
+        <div className="tabela-rolagem" tabIndex={0} role="region" aria-label="Tabela (pode rolar para o lado)">
           <table>
             <caption className="rotulo" style={{ textAlign: 'left', paddingBottom: 6 }}>Tabela com os mesmos dados</caption>
             <thead>

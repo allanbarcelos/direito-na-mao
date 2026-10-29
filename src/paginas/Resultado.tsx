@@ -3,15 +3,11 @@ import { Link } from 'react-router-dom'
 import { Ouvir } from '../componentes/Ouvir'
 import { simular } from '../calculo/simulador'
 import type { BeneficioCalculado, Cenario } from '../calculo/tipos'
+import { programaPorId as programa } from '../data/catalogo'
 import { LOCAL_POR_ID } from '../data/locais'
-import { PROGRAMAS_ESTADUAIS } from '../data/programasEstaduais'
-import { PROGRAMAS_FEDERAIS } from '../data/programasFederais'
 import { NOMES_UF } from '../data/tipos'
 import { carregarSimulacao } from '../estado/simulacao'
 import { brl } from '../lib/formatar'
-
-const PROGRAMAS = [...PROGRAMAS_FEDERAIS, ...PROGRAMAS_ESTADUAIS]
-const programa = (id: string) => PROGRAMAS.find((p) => p.id === id)
 
 export function Resultado() {
   const sim = useMemo(() => carregarSimulacao(), [])
@@ -111,7 +107,7 @@ export function Resultado() {
         <section className="cartao">
           <h2>⚖️ Comparamos outras combinações</h2>
           <p>O sistema testou {r.alternativas.length + 1} formas de pedir os benefícios e mostrou acima a que rende mais todo mês. Veja as outras:</p>
-          <div className="tabela-rolagem">
+          <div className="tabela-rolagem" tabIndex={0} role="region" aria-label="Tabela (pode rolar para o lado)">
             <table>
               <thead><tr><th>Combinação</th><th className="num">Por mês</th><th className="num">Com temporários</th></tr></thead>
               <tbody>

@@ -2,14 +2,13 @@ import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Fontes } from '../componentes/Fontes'
 import { Ouvir } from '../componentes/Ouvir'
+import { PROGRAMAS, programaPorId } from '../data/catalogo'
 import { LOCAL_POR_ID } from '../data/locais'
 import { ESTADOS_SEM_PROGRAMA, PROGRAMAS_ESTADUAIS } from '../data/programasEstaduais'
 import { PROGRAMAS_FEDERAIS } from '../data/programasFederais'
 import { NOMES_UF, UFS, type Categoria, type Programa, type UF } from '../data/tipos'
 import { carregarSimulacao } from '../estado/simulacao'
 import { dataBR } from '../lib/formatar'
-
-const TODOS: Programa[] = [...PROGRAMAS_FEDERAIS, ...PROGRAMAS_ESTADUAIS]
 
 const CATEGORIA: Record<Categoria, string> = {
   dinheiro: '💵 Dinheiro',
@@ -39,7 +38,7 @@ export function Programas() {
   return (
     <>
       <h1>📋 Todos os programas</h1>
-      <p>{TODOS.length} programas de transferência de renda, com valores de 2026 e links para as fontes oficiais.</p>
+      <p>{PROGRAMAS.length} programas de transferência de renda, com valores de 2026 e links para as fontes oficiais.</p>
 
       <div className="campo busca">
         <label htmlFor="busca">Procurar programa</label>
@@ -85,7 +84,7 @@ function CartaoPrograma({ p }: { p: Programa }) {
 
 export function ProgramaDetalhe() {
   const { id } = useParams()
-  const p = TODOS.find((x) => x.id === id)
+  const p = id ? programaPorId(id) : undefined
   if (!p) {
     return (
       <section className="cartao">

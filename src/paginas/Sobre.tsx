@@ -2,8 +2,7 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Fontes } from '../componentes/Fontes'
 import { NOME_SITE } from '../config'
-import { PROGRAMAS_ESTADUAIS } from '../data/programasEstaduais'
-import { PROGRAMAS_FEDERAIS } from '../data/programasFederais'
+import { PROGRAMAS } from '../data/catalogo'
 import { DATA_ATUALIZACAO, FONTES_REFERENCIA } from '../data/referencias'
 import { dataBR } from '../lib/formatar'
 
@@ -24,7 +23,7 @@ export function Sobre() {
     return () => window.clearTimeout(t)
   }, [pathname])
 
-  const todas = [...FONTES_REFERENCIA, ...[...PROGRAMAS_FEDERAIS, ...PROGRAMAS_ESTADUAIS].flatMap((p) => p.fontes)]
+  const todas = [...FONTES_REFERENCIA, ...PROGRAMAS.flatMap((p) => p.fontes)]
   const unicas = [...new Map(todas.map((f) => [f.url, f])).values()]
   return (
     <>

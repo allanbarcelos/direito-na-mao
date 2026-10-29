@@ -5,7 +5,7 @@ import { Inicio } from './paginas/Inicio'
 import { OndePedir } from './paginas/OndePedir'
 import { ProgramaDetalhe, Programas } from './paginas/Programas'
 import { Resultado } from './paginas/Resultado'
-import { Simulador } from './paginas/Simulador'
+import { Simulador } from './paginas/simulador/Simulador'
 import { Sobre } from './paginas/Sobre'
 
 // HashRouter: funciona em qualquer hospedagem estática, sem configuração de servidor.
