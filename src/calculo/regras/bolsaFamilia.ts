@@ -1,4 +1,4 @@
-import { BOLSA_FAMILIA } from '../../data/referencias'
+import { BOLSA_FAMILIA } from '../../servicos/referencias'
 import { brl } from '../../lib/formatar'
 import type { Avaliacao, Familia, Pessoa } from '../tipos'
 

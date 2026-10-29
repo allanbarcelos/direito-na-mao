@@ -1,4 +1,4 @@
-import type { UF } from '../data/tipos'
+import type { UF } from '../servicos/tipos'
 
 export type Escola = 'nao' | 'fundamental' | 'medio' | 'faculdade'
 

@@ -1,13 +1,13 @@
 import { Icone } from '../componentes/Icone'
 import { Ouvir } from '../componentes/Ouvir'
-import { BOLSA_FAMILIA_2026, DESTAQUES, NUMEROS } from '../data/gastos'
+import { BOLSA_FAMILIA_MENSAL, DESTAQUES, NUMEROS } from '../servicos/gastos'
 import { brl, brlGrande, dataBR, numero } from '../lib/formatar'
 
 const NOME_MES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez']
 const mesCurto = (iso: string) => `${NOME_MES[Number(iso.slice(5, 7)) - 1]}/${iso.slice(2, 4)}`
 
 export function Gastos() {
-  const maior = Math.max(...BOLSA_FAMILIA_2026.map((m) => m.total))
+  const maior = Math.max(...BOLSA_FAMILIA_MENSAL.map((m) => m.total))
   const fala = DESTAQUES.map((d) => `${d.titulo}, ${d.periodo}: ${brlGrande(d.valor)}.`).join(' ')
   return (
     <>
@@ -35,7 +35,7 @@ export function Gastos() {
         <h2>Bolsa Família: total pago por mês em 2026</h2>
         <p className="rotulo">Só os meses em que o governo divulgou o total da folha.</p>
         <div className="barras" aria-hidden="true">
-          {BOLSA_FAMILIA_2026.map((m) => (
+          {BOLSA_FAMILIA_MENSAL.map((m) => (
             <div key={m.mes} className="barra" title={`${mesCurto(m.mes)}: ${brlGrande(m.total)} para ${numero(m.familias)} famílias`}>
               <span>{mesCurto(m.mes)}</span>
               <div className="trilho"><div className="preenchimento" style={{ width: `${(m.total / maior) * 100}%` }} /></div>
@@ -50,7 +50,7 @@ export function Gastos() {
               <tr><th>Mês</th><th className="num">Famílias</th><th className="num">Total pago</th><th className="num">Média</th><th>Fonte</th></tr>
             </thead>
             <tbody>
-              {BOLSA_FAMILIA_2026.map((m) => (
+              {BOLSA_FAMILIA_MENSAL.map((m) => (
                 <tr key={m.mes}>
                   <td>{mesCurto(m.mes)}</td>
                   <td className="num">{numero(m.familias)}</td>

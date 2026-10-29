@@ -1,0 +1,2209 @@
+{
+  "programas": [
+    {
+      "id": "bolsa-familia",
+      "nome": "Bolsa Família",
+      "esfera": "federal",
+      "categoria": "dinheiro",
+      "icone": "people-fill",
+      "resumo": "Dinheiro todo mês para famílias com renda baixa. Quanto mais pessoas e crianças, maior o valor.",
+      "valorTexto": "Mínimo de R$ 691 por família, por mês",
+      "paraQuem": [
+        "Famílias com renda de até R$ 218 por pessoa por mês.",
+        "Precisa estar no Cadastro Único (CadÚnico)."
+      ],
+      "regras": [
+        "R$ 164 por pessoa da família (Renda de Cidadania).",
+        "Se a soma der menos de R$ 691, o governo completa até R$ 691.",
+        "Mais R$ 173 por criança de 0 a 6 anos (Primeira Infância).",
+        "Mais R$ 58 por gestante, por mãe que amamenta e por criança ou jovem de 7 a 17 anos.",
+        "Não tem valor máximo por família.",
+        "Crianças precisam ir à escola (60% de presença de 4 a 5 anos e 75% de 6 a 17 anos), tomar vacinas e fazer acompanhamento de saúde. Gestantes precisam fazer o pré-natal.",
+        "Regra de Proteção: se a renda subir até R$ 706 por pessoa, a família continua recebendo metade do valor por até 12 meses."
+      ],
+      "comoPedir": [
+        "Vá ao CRAS e faça o Cadastro Único com documentos de todos da casa.",
+        "A seleção é automática: o governo avisa pelo aplicativo Bolsa Família e por carta.",
+        "O dinheiro cai na conta Caixa Tem, conforme o último número do NIS."
+      ],
+      "onde": [
+        "cras",
+        "caixa"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "observacao": "Valores reajustados em 15,04% a partir de outubro de 2026 (Decreto nº 13.120/2026).",
+      "fontes": [
+        {
+          "titulo": "Lei nº 14.601/2023 — cria o Bolsa Família",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14601.htm",
+          "orgao": "Presidência da República (Planalto)"
+        },
+        {
+          "titulo": "Decreto nº 13.120/2026 — reajuste dos valores",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D13120.htm",
+          "orgao": "Presidência da República (Planalto)",
+          "data": "2026-09-17"
+        },
+        {
+          "titulo": "Bolsa Família terá valor mínimo de R$ 691 a partir de outubro",
+          "url": "https://www.gov.br/mds/pt-br/noticias/bolsa-familia-tera-valor-minimo-de-r-691-a-partir-de-outubro",
+          "orgao": "MDS",
+          "data": "2026-09-17"
+        },
+        {
+          "titulo": "Perguntas frequentes — nova Regra de Proteção (Portaria MDS nº 1.084/2025)",
+          "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia/original/informes/2025/relatorios/informe-bolsa-familia-80/perguntas_frequentes_nova_regra_de_protecao_pbf.pdf",
+          "orgao": "MDS",
+          "data": "2025-05-14"
+        },
+        {
+          "titulo": "Página oficial do Bolsa Família",
+          "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+          "orgao": "MDS"
+        }
+      ]
+    },
+    {
+      "id": "bpc",
+      "nome": "BPC — Benefício de Prestação Continuada (LOAS)",
+      "esfera": "federal",
+      "categoria": "dinheiro",
+      "icone": "person-heart",
+      "resumo": "Um salário mínimo por mês para idosos a partir de 65 anos ou pessoas com deficiência de família pobre.",
+      "valorTexto": "R$ 1.621 por mês (1 salário mínimo)",
+      "paraQuem": [
+        "Pessoas com 65 anos ou mais, ou pessoas com deficiência de qualquer idade.",
+        "Renda da família de até R$ 405,25 por pessoa (1/4 do salário mínimo).",
+        "Não precisa ter contribuído para o INSS."
+      ],
+      "regras": [
+        "Não pode ser somado com aposentadoria ou pensão do INSS.",
+        "Pode ser somado com o Bolsa Família, mas o BPC conta como renda da família no Bolsa Família.",
+        "O BPC de outro idoso ou pessoa com deficiência da casa não conta na renda para um segundo BPC.",
+        "Não paga 13º salário.",
+        "Precisa estar no CadÚnico (atualizado a cada 2 anos) e ter biometria cadastrada.",
+        "Atenção: o Decreto nº 12.534/2025 passou a contar o Bolsa Família na renda para o BPC; há decisões judiciais contrárias."
+      ],
+      "comoPedir": [
+        "Faça ou atualize o CadÚnico no CRAS.",
+        "Peça o BPC no aplicativo Meu INSS ou ligando 135.",
+        "Para deficiência, haverá avaliação médica e social no INSS. Leve laudos e exames."
+      ],
+      "onde": [
+        "cras",
+        "inss"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Lei nº 8.742/1993 (LOAS), art. 20",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm",
+          "orgao": "Presidência da República (Planalto)"
+        },
+        {
+          "titulo": "Decreto nº 12.797/2025 — salário mínimo de 2026",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12797.htm",
+          "orgao": "Presidência da República (Planalto)"
+        },
+        {
+          "titulo": "BPC — página do INSS",
+          "url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais",
+          "orgao": "INSS"
+        }
+      ]
+    },
+    {
+      "id": "auxilio-inclusao",
+      "nome": "Auxílio-Inclusão",
+      "esfera": "federal",
+      "categoria": "dinheiro",
+      "icone": "person-wheelchair",
+      "resumo": "Meio salário mínimo por mês para a pessoa com deficiência que sai do BPC para trabalhar com carteira.",
+      "valorTexto": "R$ 810,50 por mês",
+      "paraQuem": [
+        "Pessoa com deficiência moderada ou grave que recebia BPC (ou recebeu nos últimos 5 anos).",
+        "Começou a trabalhar com carteira assinada ganhando até 2 salários mínimos (R$ 3.242)."
+      ],
+      "regras": [
+        "O BPC é suspenso enquanto recebe o Auxílio-Inclusão.",
+        "Precisa estar com o CadÚnico atualizado."
+      ],
+      "comoPedir": [
+        "Peça no Meu INSS ou pelo telefone 135."
+      ],
+      "onde": [
+        "inss"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Lei nº 14.176/2021 — cria o Auxílio-Inclusão",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/L14176.htm",
+          "orgao": "Presidência da República (Planalto)"
+        },
+        {
+          "titulo": "Auxílio-Inclusão — perguntas frequentes",
+          "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/suas/beneficios-assistenciais/auxilio-inclusao/AUXILIO_INCLUSAO_PerguntasFrequentes.pdf",
+          "orgao": "MDS"
+        }
+      ],
+      "calculo": {
+        "requisitos": {},
+        "tipo": "porPessoa",
+        "pessoas": {
+          "deficiencia": true,
+          "saiuDoBPC": true,
+          "trabalhoFormal": true,
+          "rendaTrabalhoMax": {
+            "sm": 2
+          }
+        },
+        "valor": {
+          "sm": 0.5
+        },
+        "motivo": "Pessoa com deficiência que deixou o BPC para trabalhar com carteira ganhando até 2 salários mínimos.",
+        "avisos": [
+          "Peça pelo Meu INSS ou pelo telefone 135."
+        ]
+      }
+    },
+    {
+      "id": "pe-de-meia",
+      "nome": "Pé-de-Meia",
+      "esfera": "federal",
+      "categoria": "poupanca",
+      "icone": "backpack",
+      "resumo": "Dinheiro para o estudante do ensino médio público continuar estudando. Parte cai todo mês, parte fica guardada.",
+      "valorTexto": "Até R$ 3.000 por ano, R$ 9.200 no ensino médio todo",
+      "paraQuem": [
+        "Estudantes de 14 a 24 anos do ensino médio em escola pública (ou EJA até 24 anos).",
+        "Família no CadÚnico com renda de até meio salário mínimo (R$ 810,50) por pessoa. Bolsa Família tem prioridade."
+      ],
+      "regras": [
+        "R$ 200 na matrícula, uma vez por ano.",
+        "R$ 200 por mês, em até 9 parcelas, com 80% de presença nas aulas.",
+        "R$ 1.000 por ano concluído — fica guardado e só pode ser sacado ao terminar o ensino médio.",
+        "R$ 200 a mais para quem fizer os dois dias do ENEM no 3º ano.",
+        "Não conta como renda no Bolsa Família."
+      ],
+      "comoPedir": [
+        "Não precisa pedir: é automático para quem está matriculado e no CadÚnico.",
+        "Confira na escola se o CPF do estudante está certo. O dinheiro cai numa conta Caixa Tem em nome do estudante."
+      ],
+      "onde": [
+        "escola",
+        "cras",
+        "caixa"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Lei nº 14.818/2024 — institui o Pé-de-Meia",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14818.htm",
+          "orgao": "Presidência da República (Planalto)"
+        },
+        {
+          "titulo": "Pé-de-Meia — página oficial",
+          "url": "https://www.gov.br/mec/pt-br/pe-de-meia",
+          "orgao": "Ministério da Educação (MEC)"
+        },
+        {
+          "titulo": "Calendário de pagamentos",
+          "url": "https://www.gov.br/mec/pt-br/pe-de-meia/calendario-pagamentos",
+          "orgao": "MEC"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": {
+            "sm": 0.5
+          },
+          "pessoasMin": 2
+        },
+        "tipo": "porPessoa",
+        "pessoas": {
+          "escola": [
+            "medio"
+          ],
+          "idadeMin": 14,
+          "idadeMax": 24
+        },
+        "valor": 3000,
+        "motivo": "Estuda no ensino médio público e a família está no CadÚnico com renda de até meio salário mínimo por pessoa.",
+        "pagamentosPorAno": 1,
+        "frequencia": "anual",
+        "texto": "até R$ 3.000 por ano",
+        "avisos": [
+          "R$ 1.000 por ano fica guardado e só pode ser sacado ao terminar o ensino médio.",
+          "Precisa de 80% de presença nas aulas. No 3º ano, mais R$ 200 por fazer o ENEM."
+        ]
+      }
+    },
+    {
+      "id": "pe-de-meia-licenciaturas",
+      "nome": "Pé-de-Meia Licenciaturas",
+      "esfera": "federal",
+      "categoria": "poupanca",
+      "icone": "easel",
+      "resumo": "Bolsa para quem estuda para ser professor e tirou boa nota no ENEM.",
+      "valorTexto": "R$ 1.050 por mês (R$ 700 para usar + R$ 350 guardados)",
+      "paraQuem": [
+        "Estudantes de licenciatura (cursos para professor) com nota média de 650 ou mais no ENEM."
+      ],
+      "regras": [
+        "A parte guardada é liberada quando a pessoa começa a dar aula na rede pública."
+      ],
+      "comoPedir": [
+        "Inscrição pelo sistema do MEC na época do edital."
+      ],
+      "onde": [
+        "universidade"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Pé-de-Meia Licenciaturas",
+          "url": "https://www.gov.br/mec/pt-br/pe-de-meia-licenciaturas",
+          "orgao": "MEC"
+        }
+      ]
+    },
+    {
+      "id": "bolsa-verde",
+      "nome": "Bolsa Verde",
+      "esfera": "federal",
+      "categoria": "dinheiro",
+      "icone": "tree-fill",
+      "resumo": "Dinheiro a cada 3 meses para famílias que moram em áreas de floresta protegida e ajudam a cuidar dela.",
+      "valorTexto": "R$ 600 a cada 3 meses",
+      "paraQuem": [
+        "Famílias que moram em reservas extrativistas, florestas nacionais, reservas de desenvolvimento sustentável, assentamentos ambientais ou territórios tradicionais.",
+        "Renda de até meio salário mínimo por pessoa e CadÚnico."
+      ],
+      "regras": [
+        "A família precisa ser indicada pelo ICMBio, INCRA ou órgão que cuida da área.",
+        "Pode ser somada com o Bolsa Família."
+      ],
+      "comoPedir": [
+        "Fale com a associação da comunidade e com o ICMBio ou INCRA da região.",
+        "Mantenha o CadÚnico atualizado."
+      ],
+      "onde": [
+        "icmbio",
+        "cras",
+        "caixa"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Decreto nº 11.635/2023 — Programa Bolsa Verde",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/D11635.htm",
+          "orgao": "Presidência da República (Planalto)"
+        },
+        {
+          "titulo": "Bolsa Verde — Ministério do Meio Ambiente",
+          "url": "https://www.gov.br/mma/pt-br/composicao/snpct/dpct/bolsa-verde",
+          "orgao": "MMA"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "reservaOuAssentamento": true,
+          "rendaPorPessoaMax": {
+            "sm": 0.5
+          }
+        },
+        "tipo": "familia",
+        "valor": 600,
+        "motivo": "Mora em reserva extrativista, floresta nacional, assentamento ou área parecida e tem renda baixa.",
+        "pagamentosPorAno": 4,
+        "texto": "R$ 600 a cada 3 meses",
+        "avisos": [
+          "A família precisa ser indicada pelo ICMBio, INCRA ou órgão que cuida da área."
+        ]
+      }
+    },
+    {
+      "id": "garantia-safra",
+      "nome": "Garantia-Safra",
+      "esfera": "federal",
+      "categoria": "dinheiro",
+      "icone": "flower1",
+      "resumo": "Ajuda para o pequeno agricultor do semiárido que perde a plantação por seca ou chuva demais.",
+      "valorTexto": "R$ 1.200 por safra perdida",
+      "paraQuem": [
+        "Agricultores familiares em cidades do semiárido (Nordeste e norte de Minas e do Espírito Santo).",
+        "Renda da família de até 1,5 salário mínimo por mês."
+      ],
+      "regras": [
+        "Precisa aderir antes do plantio e pagar uma pequena contribuição (cerca de R$ 24).",
+        "Só paga se a cidade comprovar perda da safra (a Lei nº 15.236/2025 baixou o mínimo para 40%)."
+      ],
+      "comoPedir": [
+        "Inscreva-se pela prefeitura, com a secretaria de agricultura ou o sindicato rural."
+      ],
+      "onde": [
+        "sindicato-rural",
+        "caixa"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Lei nº 10.420/2002 — Garantia-Safra",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10420.htm",
+          "orgao": "Presidência da República (Planalto)"
+        },
+        {
+          "titulo": "Lei nº 15.236/2025 — novas regras",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15236.htm",
+          "orgao": "Presidência da República (Planalto)"
+        },
+        {
+          "titulo": "Sobre o Garantia-Safra",
+          "url": "https://www.gov.br/mda/pt-br/acesso-a-informacao/acoes-e-programas/programas-projetos-acoes-obras-e-atividades/programa-garantia-safra/sobre-o-garantia-safra",
+          "orgao": "Ministério do Desenvolvimento Agrário (MDA)"
+        },
+        {
+          "titulo": "Garantia-Safra inicia pagamentos",
+          "url": "https://www.gov.br/mda/pt-br/noticias/2026/03/garantia-safra-inicia-pagamentos-e-atende-agricultores-afetados-por-perdas-climaticas",
+          "orgao": "MDA",
+          "data": "2026-03"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "semiarido": true,
+          "alguem": [
+            {
+              "agricultor": true
+            }
+          ],
+          "rendaFamiliarMax": {
+            "sm": 1.5
+          }
+        },
+        "tipo": "familia",
+        "valor": 1200,
+        "motivo": "Agricultor familiar no semiárido com renda da família de até 1,5 salário mínimo.",
+        "pagamentosPorAno": 1,
+        "frequencia": "anual",
+        "texto": "R$ 1.200 se perder a safra",
+        "avisos": [
+          "Só paga se a cidade tiver perda de pelo menos 50% da safra.",
+          "É preciso aderir antes de plantar (contribuição de cerca de R$ 24)."
+        ]
+      }
+    },
+    {
+      "id": "seguro-defeso",
+      "nome": "Seguro-Defeso",
+      "esfera": "federal",
+      "categoria": "trabalhista",
+      "icone": "water",
+      "resumo": "Um salário mínimo por mês para o pescador artesanal nos meses em que a pesca é proibida.",
+      "valorTexto": "R$ 1.621 por mês de defeso",
+      "paraQuem": [
+        "Pescadores artesanais com Registro Geral da Pesca (RGP) que vivem só da pesca."
+      ],
+      "regras": [
+        "Paga durante o período de defeso da espécie (geralmente de 3 a 5 meses).",
+        "O pescador não pode receber BPC, aposentadoria ou outro benefício contínuo (pensão por morte e auxílio-acidente são permitidos).",
+        "Não suspende o Bolsa Família da família.",
+        "Exige CadÚnico e biometria (Lei nº 15.399/2026)."
+      ],
+      "comoPedir": [
+        "Peça no Ministério do Trabalho (telefone 158 ou gov.br) no começo do defeso.",
+        "A colônia de pescadores ajuda com os documentos."
+      ],
+      "onde": [
+        "colonia",
+        "cras"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Lei nº 10.779/2003 — seguro-desemprego do pescador artesanal",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.779.htm",
+          "orgao": "Presidência da República (Planalto)"
+        },
+        {
+          "titulo": "Publicada lei que fixa novas regras para o seguro-defeso (Lei nº 15.399/2026)",
+          "url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2026/05/publicada-lei-que-fixa-novas-regras-para-concessao-do-seguro-desemprego-a-pescadores-no-periodo-do-defeso",
+          "orgao": "Presidência da República (Planalto)",
+          "data": "2026-05-04"
+        }
+      ],
+      "calculo": {
+        "requisitos": {},
+        "tipo": "porPessoa",
+        "pessoas": {
+          "pescador": true,
+          "semBPC": true,
+          "semAposentadoria": true
+        },
+        "valor": {
+          "sm": 1
+        },
+        "motivo": "Pescador artesanal: recebe nos meses em que a pesca é proibida.",
+        "pagamentosPorAno": 4,
+        "frequencia": "sazonal",
+        "texto": "{valor} por mês de defeso",
+        "avisos": [
+          "A média mensal considera 4 meses de defeso por ano; varia conforme a espécie e a região.",
+          "Precisa do Registro Geral da Pesca (RGP), CadÚnico e biometria."
+        ]
+      }
+    },
+    {
+      "id": "gas-do-povo",
+      "nome": "Gás do Povo",
+      "esfera": "federal",
+      "categoria": "produto",
+      "icone": "fire",
+      "resumo": "Botijão de gás de cozinha de graça para famílias de baixa renda.",
+      "valorTexto": "4 ou 6 botijões de 13 kg por ano",
+      "paraQuem": [
+        "Famílias no CadÚnico (atualizado nos últimos 2 anos) com renda de até meio salário mínimo por pessoa."
+      ],
+      "regras": [
+        "Famílias de 2 ou 3 pessoas: 4 botijões por ano. De 4 pessoas ou mais: 6 por ano.",
+        "Substituiu o antigo Auxílio Gás, que era pago em dinheiro.",
+        "Os vales são liberados no dia 10 de cada mês."
+      ],
+      "comoPedir": [
+        "É automático para quem está no CadÚnico. Consulte no aplicativo Bolsa Família ou Caixa Tem e retire numa revenda credenciada."
+      ],
+      "onde": [
+        "cras",
+        "caixa"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Lei nº 15.348/2026 — Gás do Povo",
+          "url": "https://www.gov.br/mme/pt-br/acesso-a-informacao/legislacao/leis/lei-n-15-348-2026.pdf",
+          "orgao": "Ministério de Minas e Energia (MME)",
+          "data": "2026-02-13"
+        },
+        {
+          "titulo": "Gás do Povo — perguntas frequentes",
+          "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/gas-do-povo/faq_mds_gas-do-povo.pdf",
+          "orgao": "MDS"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": {
+            "sm": 0.5
+          },
+          "pessoasMin": 2
+        },
+        "tipo": "familia",
+        "valor": 0,
+        "motivo": "Família no CadÚnico com renda de até meio salário mínimo por pessoa.",
+        "semValor": true,
+        "frequencia": "produto",
+        "textoPorTamanho": [
+          {
+            "pessoasMin": 4,
+            "texto": "6 botijões grátis por ano"
+          },
+          {
+            "pessoasMin": 0,
+            "texto": "4 botijões grátis por ano"
+          }
+        ],
+        "avisos": [
+          "Não é dinheiro: a família retira o botijão de 13 kg de graça em revendas credenciadas."
+        ]
+      }
+    },
+    {
+      "id": "tarifa-social",
+      "nome": "Tarifa Social de Energia (Luz do Povo)",
+      "esfera": "federal",
+      "categoria": "desconto",
+      "icone": "lightbulb-fill",
+      "resumo": "Conta de luz de graça até 80 kWh por mês para famílias de baixa renda.",
+      "valorTexto": "Isenção até 80 kWh por mês",
+      "paraQuem": [
+        "Famílias no CadÚnico com renda de até meio salário mínimo por pessoa.",
+        "Famílias com alguém que recebe BPC.",
+        "Famílias indígenas e quilombolas no CadÚnico."
+      ],
+      "regras": [
+        "O consumo acima de 80 kWh é cobrado normalmente.",
+        "Famílias com renda entre meio e 1 salário mínimo por pessoa têm um desconto menor (Desconto Social)."
+      ],
+      "comoPedir": [
+        "Costuma ser automático. Se não aparecer na conta, ligue para a companhia de energia com o NIS."
+      ],
+      "onde": [
+        "distribuidora",
+        "cras"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Lei nº 12.212/2010 — Tarifa Social de Energia Elétrica",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12212.htm",
+          "orgao": "Presidência da República (Planalto)"
+        },
+        {
+          "titulo": "Tarifa Social — ANEEL",
+          "url": "https://www.gov.br/aneel/pt-br/assuntos/tarifas/tarifa-social",
+          "orgao": "ANEEL"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "qualquer": [
+            {
+              "temBPC": true,
+              "motivo": "Família com pessoa que recebe BPC."
+            },
+            {
+              "rendaPorPessoaMax": {
+                "sm": 0.5
+              },
+              "motivo": "Família no CadÚnico com renda de até meio salário mínimo por pessoa."
+            }
+          ]
+        },
+        "tipo": "familia",
+        "valor": 0,
+        "motivo": "Família no CadÚnico com renda de até meio salário mínimo por pessoa.",
+        "semValor": true,
+        "frequencia": "desconto",
+        "texto": "Luz grátis até 80 kWh por mês",
+        "avisos": [
+          "Costuma entrar automático. Se não aparecer na conta de luz, ligue para a distribuidora com o NIS em mãos."
+        ]
+      }
+    },
+    {
+      "id": "pensao-zika",
+      "nome": "Pensão especial — vírus Zika",
+      "esfera": "federal",
+      "categoria": "dinheiro",
+      "icone": "heart-pulse-fill",
+      "resumo": "Pensão para a vida toda e indenização para pessoas com deficiência causada pelo vírus Zika.",
+      "valorTexto": "R$ 8.475,55 por mês + R$ 50.000 uma vez",
+      "paraQuem": [
+        "Pessoas com deficiência permanente causada pela síndrome congênita do vírus Zika."
+      ],
+      "regras": [
+        "O valor mensal é igual ao teto do INSS (R$ 8.475,55 em 2026).",
+        "Indenização única de R$ 50.000 por danos morais.",
+        "Pode ser somada com o BPC. Não paga imposto de renda."
+      ],
+      "comoPedir": [
+        "Peça no Meu INSS ou pelo 135, com laudo médico."
+      ],
+      "onde": [
+        "inss"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Lei nº 15.156/2025 — pensão especial Zika",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15156.htm",
+          "orgao": "Presidência da República (Planalto)"
+        },
+        {
+          "titulo": "INSS recebe pedidos de pensão e indenização (Zika)",
+          "url": "https://www.gov.br/inss/pt-br/inss-recebe-pedidos-de-pensao-e-indenizacao-para-pessoas-com-deficiencia-causada-pelo-virus-zika",
+          "orgao": "INSS"
+        },
+        {
+          "titulo": "Teto do INSS chega a R$ 8.475,55 em 2026",
+          "url": "https://www.gov.br/inss/pt-br/assuntos/com-reajuste-de-3-9-teto-do-inss-chega-a-r-8-475-55-em-2026",
+          "orgao": "INSS",
+          "data": "2026-01-09"
+        }
+      ],
+      "calculo": {
+        "requisitos": {},
+        "tipo": "porPessoa",
+        "pessoas": {
+          "zika": true
+        },
+        "valor": 0,
+        "motivo": "Deficiência causada pela síndrome congênita do vírus Zika.",
+        "semValor": true,
+        "nome": "Pensão especial (Zika)",
+        "texto": "Valor igual ao teto do INSS, por mês, para sempre",
+        "avisos": [
+          "Também há indenização única de R$ 50.000.",
+          "Pode ser somada ao BPC.",
+          "O valor não entra na soma abaixo porque depende do teto do INSS do ano."
+        ]
+      }
+    },
+    {
+      "id": "bolsa-permanencia",
+      "nome": "Bolsa Permanência",
+      "esfera": "federal",
+      "categoria": "dinheiro",
+      "icone": "mortarboard-fill",
+      "resumo": "Bolsa para estudantes indígenas e quilombolas se manterem na universidade federal.",
+      "valorTexto": "R$ 1.400 por mês",
+      "paraQuem": [
+        "Estudantes indígenas e quilombolas matriculados em universidades e institutos federais."
+      ],
+      "regras": [
+        "Precisa comprovar a condição de indígena ou quilombola junto à universidade."
+      ],
+      "comoPedir": [
+        "Inscrição pelo Sistema de Gestão da Bolsa Permanência (SISBP), com apoio da universidade."
+      ],
+      "onde": [
+        "universidade"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Sistema da Bolsa Permanência (SISBP)",
+          "url": "https://sisbp.mec.gov.br",
+          "orgao": "MEC"
+        }
+      ],
+      "calculo": {
+        "requisitos": {},
+        "tipo": "porPessoa",
+        "pessoas": {
+          "escola": [
+            "faculdade"
+          ],
+          "indigenaQuilombola": true
+        },
+        "valor": 1400,
+        "motivo": "Estudante indígena ou quilombola em universidade federal.",
+        "avisos": [
+          "Pedido feito na própria universidade."
+        ]
+      }
+    },
+    {
+      "id": "abono-salarial",
+      "nome": "Abono Salarial PIS/PASEP",
+      "esfera": "federal",
+      "categoria": "trabalhista",
+      "icone": "briefcase-fill",
+      "resumo": "Até um salário mínimo por ano para quem trabalhou com carteira e ganhou pouco.",
+      "valorTexto": "Até R$ 1.621 por ano",
+      "paraQuem": [
+        "Trabalhadores com carteira assinada há pelo menos 5 anos (PIS/PASEP) e salário médio de até R$ 2.765,93 no ano-base."
+      ],
+      "regras": [
+        "O valor é proporcional aos meses trabalhados no ano-base.",
+        "Precisa ter trabalhado pelo menos 30 dias no ano-base."
+      ],
+      "comoPedir": [
+        "É automático. Consulte na Carteira de Trabalho Digital ou no telefone 158."
+      ],
+      "onde": [
+        "caixa"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Lei nº 7.998/1990 — Abono e Seguro-Desemprego",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7998.htm",
+          "orgao": "Presidência da República (Planalto)"
+        }
+      ]
+    },
+    {
+      "id": "seguro-desemprego",
+      "nome": "Seguro-Desemprego",
+      "esfera": "federal",
+      "categoria": "trabalhista",
+      "icone": "file-earmark-text-fill",
+      "resumo": "Ajuda por alguns meses para quem foi demitido sem justa causa.",
+      "valorTexto": "De R$ 1.621 a R$ 2.518,65 por parcela",
+      "paraQuem": [
+        "Quem trabalhou com carteira e foi demitido sem justa causa."
+      ],
+      "regras": [
+        "De 3 a 5 parcelas, conforme o tempo trabalhado."
+      ],
+      "comoPedir": [
+        "Peça pela Carteira de Trabalho Digital, no gov.br ou no SINE."
+      ],
+      "onde": [],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Lei nº 7.998/1990",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7998.htm",
+          "orgao": "Presidência da República (Planalto)"
+        }
+      ]
+    },
+    {
+      "id": "bolsa-atleta",
+      "nome": "Bolsa Atleta",
+      "esfera": "federal",
+      "categoria": "dinheiro",
+      "icone": "trophy-fill",
+      "resumo": "Bolsa para atletas com bons resultados em competições. Não depende da renda.",
+      "valorTexto": "De R$ 410 a R$ 16.629 por mês",
+      "paraQuem": [
+        "Atletas que tiveram bons resultados em competições oficiais no ano anterior."
+      ],
+      "regras": [
+        "O valor depende da categoria (estudantil, nacional, internacional, olímpica/paralímpica, pódio)."
+      ],
+      "comoPedir": [
+        "Inscrição no site do Ministério do Esporte, na época do edital."
+      ],
+      "onde": [],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Bolsa Atleta — Ministério do Esporte",
+          "url": "https://www.gov.br/esporte/pt-br/acoes-e-programas/bolsa-atleta",
+          "orgao": "Ministério do Esporte"
+        }
+      ]
+    },
+    {
+      "id": "ce-ceara-sem-fome",
+      "uf": "CE",
+      "nome": "Cartão Ceará Sem Fome",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "basket2-fill",
+      "resumo": "R$ 300 por mês para comprar comida, para famílias do Bolsa Família em extrema pobreza.",
+      "valorTexto": "R$ 300 por mês",
+      "paraQuem": [
+        "Famílias do Bolsa Família no Ceará com renda de até R$ 218 por pessoa (contando o Bolsa Família).",
+        "Prioridade para mulheres chefes de família com crianças até 14 anos."
+      ],
+      "regras": [
+        "Só pode ser usado para comprar alimentos.",
+        "CadÚnico atualizado nos últimos 2 anos."
+      ],
+      "comoPedir": [
+        "A seleção é automática pelo CadÚnico. Mantenha o cadastro em dia no CRAS."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Ceará Sem Fome — site oficial",
+          "url": "https://www.cearasemfome.ce.gov.br",
+          "orgao": "Governo do Ceará"
+        },
+        {
+          "titulo": "Governo inclui mais de 16 mil novas famílias no Cartão Ceará Sem Fome 2026",
+          "url": "https://www.sps.ce.gov.br/2026/04/28/governo-do-ceara-inclui-mais-de-16-mil-novas-familias-no-cartao-ceara-sem-fome-2026/",
+          "orgao": "Secretaria da Proteção Social (CE)",
+          "data": "2026-04-28"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "bolsaFamilia": "exige",
+          "rendaComBolsaFamiliaMax": 218
+        },
+        "tipo": "familia",
+        "valor": 300,
+        "motivo": "Família do Bolsa Família no Ceará ainda abaixo de R$ 218 por pessoa.",
+        "avisos": [
+          "Só para comprar alimentos.",
+          "O número de vagas é limitado e a seleção é feita pelo governo do estado."
+        ]
+      }
+    },
+    {
+      "id": "ce-mais-infancia",
+      "uf": "CE",
+      "nome": "Cartão Mais Infância Ceará",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "balloon-heart-fill",
+      "resumo": "R$ 100 por mês para famílias muito pobres com crianças pequenas.",
+      "valorTexto": "R$ 100 por mês",
+      "paraQuem": [
+        "Famílias no CadÚnico com crianças de 0 a 5 anos e 11 meses.",
+        "Renda de até R$ 89 por pessoa, sem contar o Bolsa Família."
+      ],
+      "regras": [
+        "Pode ser somado com o Bolsa Família."
+      ],
+      "comoPedir": [
+        "Seleção automática pelo CadÚnico."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Mais Infância Ceará",
+          "url": "https://www.sps.ce.gov.br/institucional/secretarias-executivas/infancia-familia-e-combate-a-fome/mais-infancia-ceara-destaque/",
+          "orgao": "Secretaria da Proteção Social (CE)"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "alguem": [
+            {
+              "idadeMax": 5
+            }
+          ],
+          "rendaPorPessoaMax": 89
+        },
+        "tipo": "familia",
+        "valor": 100,
+        "motivo": "Criança de até 5 anos e renda de até R$ 89 por pessoa."
+      }
+    },
+    {
+      "id": "ma-livre-da-fome",
+      "uf": "MA",
+      "nome": "Maranhão Livre da Fome",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "basket2-fill",
+      "resumo": "Complemento ao Bolsa Família para famílias que continuam na extrema pobreza.",
+      "valorTexto": "R$ 200 + R$ 50 por criança de 0 a 6 anos",
+      "paraQuem": [
+        "Famílias do Bolsa Família no Maranhão com renda de até R$ 218 por pessoa.",
+        "Moradores dos municípios atendidos (o programa está sendo ampliado)."
+      ],
+      "regras": [
+        "O governo anunciou aumento do valor base para R$ 300 e adicional por pessoa com deficiência; confira o valor atual no site oficial.",
+        "Bônus de R$ 200 ao concluir curso de qualificação."
+      ],
+      "comoPedir": [
+        "Seleção pelo CadÚnico nos municípios atendidos. Procure o CRAS."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Maranhão Livre da Fome — site oficial",
+          "url": "https://maranhaolivredafome.ma.gov.br",
+          "orgao": "Governo do Maranhão"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "bolsaFamilia": "exige",
+          "rendaPorPessoaMax": 218
+        },
+        "tipo": "familia",
+        "valor": 200,
+        "motivo": "Família do Bolsa Família no Maranhão abaixo de R$ 218 por pessoa.",
+        "adicionais": [
+          {
+            "por": {
+              "idadeMax": 6
+            },
+            "valor": 50
+          }
+        ],
+        "avisos": [
+          "Só em municípios atendidos.",
+          "Valor pode ser maior (aumento anunciado para R$ 300 de base)."
+        ]
+      }
+    },
+    {
+      "id": "pe-maes-de-pernambuco",
+      "uf": "PE",
+      "nome": "Mães de Pernambuco",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "heart-fill",
+      "resumo": "R$ 300 por mês para mães do Bolsa Família com filhos pequenos ou grávidas.",
+      "valorTexto": "R$ 300 por mês por família",
+      "paraQuem": [
+        "Mulher responsável pela família no Bolsa Família.",
+        "Grávida ou com filho de 0 a 6 anos.",
+        "Sem emprego com carteira assinada."
+      ],
+      "regras": [
+        "Cai na mesma conta do Bolsa Família e não diminui o Bolsa Família.",
+        "Abre ciclos de inscrição com número limitado de vagas."
+      ],
+      "comoPedir": [
+        "Inscrição no site oficial quando o ciclo estiver aberto, ou com ajuda do CRAS."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Mães de Pernambuco — site oficial",
+          "url": "https://maesdepernambuco.pe.gov.br",
+          "orgao": "Governo de Pernambuco"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "bolsaFamilia": "exige",
+          "alguem": [
+            {
+              "responsavel": true,
+              "trabalhoFormal": false
+            }
+          ],
+          "qualquer": [
+            {
+              "alguem": [
+                {
+                  "gestante": true
+                }
+              ]
+            },
+            {
+              "alguem": [
+                {
+                  "idadeMax": 6
+                }
+              ]
+            }
+          ]
+        },
+        "tipo": "familia",
+        "valor": 300,
+        "motivo": "Mãe responsável no Bolsa Família, grávida ou com criança de até 6 anos.",
+        "avisos": [
+          "O número de vagas é limitado e a seleção é feita pelo governo do estado."
+        ]
+      }
+    },
+    {
+      "id": "al-cria",
+      "uf": "AL",
+      "nome": "Cartão CRIA (Criança Alagoana)",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "balloon-fill",
+      "resumo": "R$ 150 por mês para gestantes e famílias pobres com crianças de até 6 anos.",
+      "valorTexto": "R$ 150 por mês + 13ª parcela",
+      "paraQuem": [
+        "Gestantes ou responsáveis por crianças de 0 a 6 anos.",
+        "CadÚnico com renda de até R$ 218 por pessoa."
+      ],
+      "regras": [
+        "Gêmeos: R$ 300 por mês.",
+        "Tem 13ª parcela no fim do ano."
+      ],
+      "comoPedir": [
+        "Procure o CRAS. A seleção usa o CadÚnico."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "CRIA — Criança Alagoana",
+          "url": "https://alagoas.al.gov.br/programa/cria-crianca-alagoana",
+          "orgao": "Governo de Alagoas"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": 218,
+          "qualquer": [
+            {
+              "alguem": [
+                {
+                  "gestante": true
+                }
+              ]
+            },
+            {
+              "alguem": [
+                {
+                  "idadeMax": 6
+                }
+              ]
+            }
+          ]
+        },
+        "tipo": "familia",
+        "valor": 150,
+        "motivo": "Gestante ou criança de até 6 anos em família de baixa renda.",
+        "pagamentosPorAno": 13,
+        "texto": "R$ 150 por mês + 13ª",
+        "avisos": [
+          "A média mensal inclui a 13ª parcela."
+        ]
+      }
+    },
+    {
+      "id": "al-escola-10",
+      "uf": "AL",
+      "nome": "Cartão Escola 10",
+      "esfera": "estadual",
+      "categoria": "poupanca",
+      "icone": "backpack",
+      "resumo": "Bolsa para todos os alunos do ensino médio da rede estadual de Alagoas, sem limite de renda.",
+      "valorTexto": "R$ 100 por mês (R$ 150 integral) + R$ 2.000 ao concluir",
+      "paraQuem": [
+        "Estudantes do ensino médio e EJA da rede estadual de Alagoas.",
+        "Não depende da renda da família."
+      ],
+      "regras": [
+        "Precisa de 90% de presença.",
+        "Bolsa Conclusão de R$ 2.000 ao terminar o ensino médio."
+      ],
+      "comoPedir": [
+        "É automático para alunos matriculados. Pagamento por Pix no CPF do estudante."
+      ],
+      "onde": [
+        "escola"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Cartão Escola 10",
+          "url": "https://www.educacao.al.gov.br/estudante/cartao-escola-10",
+          "orgao": "Secretaria de Educação de Alagoas"
+        }
+      ],
+      "calculo": {
+        "requisitos": {},
+        "tipo": "porPessoa",
+        "pessoas": {
+          "escola": [
+            "medio"
+          ]
+        },
+        "valor": 100,
+        "motivo": "Estuda no ensino médio da rede estadual.",
+        "valorIntegral": 150,
+        "avisos": [
+          "Precisa de 90% de presença.",
+          "Mais R$ 2.000 ao concluir o ensino médio."
+        ]
+      }
+    },
+    {
+      "id": "ba-bolsa-presenca",
+      "uf": "BA",
+      "nome": "Bolsa Presença",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "book-fill",
+      "resumo": "Dinheiro para famílias pobres manterem os filhos na escola estadual da Bahia.",
+      "valorTexto": "R$ 150 por família + R$ 50 por estudante a mais",
+      "paraQuem": [
+        "Famílias no CadÚnico em situação de pobreza com estudantes na rede estadual da Bahia."
+      ],
+      "regras": [
+        "O estudante precisa ter frequência escolar."
+      ],
+      "comoPedir": [
+        "É automático para estudantes da rede estadual com família no CadÚnico."
+      ],
+      "onde": [
+        "escola",
+        "cras"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Bolsa Presença",
+          "url": "https://www.ba.gov.br/educacao/bolsa-presenca",
+          "orgao": "Secretaria da Educação da Bahia"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": 218,
+          "alguem": [
+            {
+              "escola": [
+                "fundamental",
+                "medio"
+              ]
+            }
+          ]
+        },
+        "tipo": "familia",
+        "valor": 150,
+        "motivo": "Estudante(s) na escola pública e renda baixa.",
+        "adicionais": [
+          {
+            "por": {
+              "escola": [
+                "fundamental",
+                "medio"
+              ]
+            },
+            "valor": 50,
+            "descontar": 1
+          }
+        ],
+        "avisos": [
+          "Vale para alunos da rede estadual."
+        ]
+      }
+    },
+    {
+      "id": "ba-mais-futuro",
+      "uf": "BA",
+      "nome": "Mais Futuro",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "mortarboard-fill",
+      "resumo": "Bolsa para estudantes de baixa renda das universidades estaduais da Bahia.",
+      "valorTexto": "R$ 400 por mês (R$ 800 se mora longe da família)",
+      "paraQuem": [
+        "Alunos da UNEB, UESB, UEFS ou UESC com renda de até meio salário mínimo por pessoa."
+      ],
+      "regras": [
+        "Inscrição por edital."
+      ],
+      "comoPedir": [
+        "Acompanhe o edital na sua universidade."
+      ],
+      "onde": [
+        "universidade"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Edital SEC nº 15/2026 — Mais Futuro",
+          "url": "https://www.uesb.br/wp-content/uploads/2026/08/EDITAL-SEC-No-15_2026-Mais-Futuro.pdf",
+          "orgao": "Secretaria da Educação da Bahia / UESB",
+          "data": "2026-08"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": {
+            "sm": 0.5
+          }
+        },
+        "tipo": "porPessoa",
+        "pessoas": {
+          "escola": [
+            "faculdade"
+          ]
+        },
+        "valor": 400,
+        "motivo": "Universitário de baixa renda (só em universidade estadual da Bahia).",
+        "avisos": [
+          "Só para UNEB, UESB, UEFS e UESC."
+        ]
+      }
+    },
+    {
+      "id": "se-cmais",
+      "uf": "SE",
+      "nome": "CMais (Cartão Mais Inclusão)",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "credit-card-2-front-fill",
+      "resumo": "Conjunto de cartões de ajuda do governo de Sergipe para crianças, mães e mulheres.",
+      "valorTexto": "R$ 130 por mês (Ser Criança)",
+      "paraQuem": [
+        "CMais Ser Criança: famílias no CadÚnico com crianças de 0 a 6 anos.",
+        "Outras linhas: mães solo, mulheres vítimas de violência, feirantes."
+      ],
+      "regras": [
+        "Vagas limitadas."
+      ],
+      "comoPedir": [
+        "Procure o CRAS ou a Secretaria de Assistência Social de Sergipe."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "confirmar",
+      "conferido": "2026-10-29",
+      "observacao": "Valores de 2026 não confirmados em página oficial.",
+      "fontes": [
+        {
+          "titulo": "Programa CMais ultrapassa R$ 100 milhões investidos",
+          "url": "https://www.se.gov.br/agencia/noticias/assistencia-social/programa_cmais_inclusao_ultrapassa_r_100_milhoes_investidos_e_alcanca_mais_de_750_mil_beneficios_pagos_em_sergipe",
+          "orgao": "Governo de Sergipe"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "alguem": [
+            {
+              "idadeMax": 6
+            }
+          ],
+          "rendaPorPessoaMax": 218
+        },
+        "tipo": "familia",
+        "valor": 130,
+        "motivo": "Criança de até 6 anos no CadÚnico."
+      }
+    },
+    {
+      "id": "pi-cartao-social",
+      "uf": "PI",
+      "nome": "Cartão Social Piauí",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "credit-card-2-front-fill",
+      "resumo": "Seis parcelas de R$ 200 por ano para famílias muito pobres do Piauí.",
+      "valorTexto": "6 × R$ 200 por ano",
+      "paraQuem": [
+        "Famílias no CadÚnico com renda de até R$ 218 por pessoa, em municípios que aderiram."
+      ],
+      "regras": [
+        "A lei limita a soma com outros benefícios assistenciais (exceto famílias grandes)."
+      ],
+      "comoPedir": [
+        "Seleção pelo município. Procure o CRAS."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "incerto",
+      "status": "confirmar",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Seleção das famílias para o Cartão Social",
+          "url": "https://www.pi.gov.br/selecao-das-familias-para-receber-o-cartao-social-deve-comecar-em-agosto/",
+          "orgao": "Governo do Piauí"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": 218
+        },
+        "tipo": "familia",
+        "valor": 200,
+        "motivo": "Renda de até R$ 218 por pessoa.",
+        "pagamentosPorAno": 6,
+        "frequencia": "anual",
+        "texto": "6 × R$ 200 por ano"
+      }
+    },
+    {
+      "id": "pb-cartao-alimentacao",
+      "uf": "PB",
+      "nome": "Cartão Alimentação Paraíba",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "basket2-fill",
+      "resumo": "R$ 50 por mês para comprar comida, para famílias em vulnerabilidade na Paraíba.",
+      "valorTexto": "R$ 50 por mês",
+      "paraQuem": [
+        "Famílias no CadÚnico em situação de vulnerabilidade na Paraíba."
+      ],
+      "regras": [
+        "Só para alimentos.",
+        "Lei estadual nº 12.166/2021."
+      ],
+      "comoPedir": [
+        "Seleção pelo CadÚnico. Atualize o cadastro no CRAS."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Cartão Alimentação — atualização cadastral",
+          "url": "https://paraiba.pb.gov.br/noticias/cartao-alimentacao-nove-cidades-realizam-atualizacao-cadastral-a-partir-desta-terca-feira-11",
+          "orgao": "Governo da Paraíba"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": 218
+        },
+        "tipo": "familia",
+        "valor": 50,
+        "motivo": "Família no CadÚnico de baixa renda.",
+        "avisos": [
+          "Só para alimentos."
+        ]
+      }
+    },
+    {
+      "id": "am-auxilio-estadual",
+      "uf": "AM",
+      "nome": "Auxílio Estadual Permanente",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "credit-card-2-front-fill",
+      "resumo": "R$ 150 por mês para famílias pobres do Amazonas.",
+      "valorTexto": "R$ 150 por mês",
+      "paraQuem": [
+        "Famílias no CadÚnico em situação de pobreza ou extrema pobreza no Amazonas."
+      ],
+      "regras": [
+        "Lei estadual nº 5.665/2021."
+      ],
+      "comoPedir": [
+        "Seleção pelo CadÚnico. Procure o CRAS."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Secretaria de Assistência Social do Amazonas",
+          "url": "https://www.seas.am.gov.br",
+          "orgao": "Governo do Amazonas"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": 218
+        },
+        "tipo": "familia",
+        "valor": 150,
+        "motivo": "Família pobre no CadÚnico do Amazonas."
+      }
+    },
+    {
+      "id": "to-cartao-alimento",
+      "uf": "TO",
+      "nome": "Cartão AlimenTO",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "basket2-fill",
+      "resumo": "R$ 250 por mês para comprar comida, por 12 meses.",
+      "valorTexto": "R$ 250 por mês",
+      "paraQuem": [
+        "Famílias no CadÚnico, moradoras do Tocantins, selecionadas pelo estado (cerca de 7 mil)."
+      ],
+      "regras": [
+        "Pago de dezembro de 2025 a dezembro de 2026.",
+        "A lei permite somar com o Bolsa Família."
+      ],
+      "comoPedir": [
+        "Seleção pelo CadÚnico. Procure o CRAS."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Governo do Tocantins — Secom",
+          "url": "https://www.to.gov.br/secom",
+          "orgao": "Governo do Tocantins"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": 218
+        },
+        "tipo": "familia",
+        "valor": 250,
+        "motivo": "Família de baixa renda no CadÚnico do Tocantins.",
+        "avisos": [
+          "O número de vagas é limitado e a seleção é feita pelo governo do estado.",
+          "Só para alimentos."
+        ],
+        "temporario": "até dez/2026"
+      }
+    },
+    {
+      "id": "rr-cesta-da-familia",
+      "uf": "RR",
+      "nome": "Cesta da Família",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "basket-fill",
+      "resumo": "R$ 200 por mês em cartão (ou cesta básica) para famílias de baixa renda de Roraima.",
+      "valorTexto": "R$ 200 por mês",
+      "paraQuem": [
+        "Famílias com renda de até meio salário mínimo por pessoa em Roraima."
+      ],
+      "regras": [
+        "Há proposta de aumento para R$ 400 a partir de 2027 (não confirmada)."
+      ],
+      "comoPedir": [
+        "Procure a SETRABES ou o CRAS."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "SETRABES — Roraima",
+          "url": "https://setrabes.rr.gov.br",
+          "orgao": "Governo de Roraima"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": {
+            "sm": 0.5
+          }
+        },
+        "tipo": "familia",
+        "valor": 200,
+        "motivo": "Renda de até meio salário mínimo por pessoa."
+      }
+    },
+    {
+      "id": "ap-renda-viver-melhor",
+      "uf": "AP",
+      "nome": "Renda para Viver Melhor",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "credit-card-2-front-fill",
+      "resumo": "Pela lei, meio salário mínimo por mês para famílias muito pobres do Amapá.",
+      "valorTexto": "Meio salário mínimo por mês (pela lei)",
+      "paraQuem": [
+        "Famílias com renda de até 1/4 do salário mínimo por pessoa."
+      ],
+      "regras": [
+        "Permanência de até 2 anos (+1).",
+        "Lei estadual nº 1.598/2011."
+      ],
+      "comoPedir": [
+        "Procure a Secretaria de Inclusão e Mobilização Social (SIMS)."
+      ],
+      "onde": [
+        "estado",
+        "cras"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "confirmar",
+      "conferido": "2026-10-29",
+      "observacao": "Não encontramos pagamento confirmado em 2025/2026.",
+      "fontes": [
+        {
+          "titulo": "Renda para Viver Melhor — SIMS",
+          "url": "https://sims.portal.ap.gov.br/conteudo/servicos/renda-para-viver-melhor",
+          "orgao": "Governo do Amapá"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": {
+            "sm": 0.25
+          }
+        },
+        "tipo": "familia",
+        "valor": {
+          "sm": 0.5
+        },
+        "motivo": "Renda de até 1/4 do salário mínimo por pessoa."
+      }
+    },
+    {
+      "id": "sp-superacao",
+      "uf": "SP",
+      "nome": "SuperAção SP",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "rocket-takeoff-fill",
+      "resumo": "Dinheiro por pessoa da família, mais bônus por curso e emprego, para sair da pobreza.",
+      "valorTexto": "R$ 150,33 por pessoa, por mês",
+      "paraQuem": [
+        "Famílias no CadÚnico com renda de até R$ 218 por pessoa, nos municípios participantes."
+      ],
+      "regras": [
+        "Pago por 6 meses, podendo ser renovado por mais 6.",
+        "Bônus únicos: R$ 200 ao assinar o plano da família, R$ 600 de capacitação e outros por curso e emprego.",
+        "Lei estadual nº 18.176 e Decreto nº 69.762."
+      ],
+      "comoPedir": [
+        "Procure o CRAS do seu município para saber se ele participa."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "SuperAção SP — site oficial",
+          "url": "https://www.superacaosp.sp.gov.br",
+          "orgao": "Governo de São Paulo"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": 218
+        },
+        "tipo": "porPessoaDaFamilia",
+        "valor": 150.33,
+        "motivo": "{n} pessoa(s) × R$ 150,33.",
+        "avisos": [
+          "Só nos municípios participantes.",
+          "O número de vagas é limitado e a seleção é feita pelo governo do estado."
+        ],
+        "temporario": "6 a 12 meses"
+      }
+    },
+    {
+      "id": "es-bolsa-capixaba",
+      "uf": "ES",
+      "nome": "Bolsa Capixaba",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "credit-card-2-front-fill",
+      "resumo": "Dinheiro todo mês para famílias muito pobres do Espírito Santo que NÃO recebem Bolsa Família.",
+      "valorTexto": "De R$ 50 a R$ 600 por mês (varia)",
+      "paraQuem": [
+        "Famílias no CadÚnico com renda de até R$ 155 por pessoa.",
+        "Que não recebem Bolsa Família."
+      ],
+      "regras": [
+        "O valor depende da renda e do tamanho da família."
+      ],
+      "comoPedir": [
+        "Seleção pelo CadÚnico. Procure o CRAS."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "nao",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Acessar o benefício do Bolsa Capixaba",
+          "url": "https://setades.es.gov.br/Acessar-o-beneficio-do-Bolsa-Capixaba",
+          "orgao": "Governo do Espírito Santo"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "bolsaFamilia": "exclui",
+          "rendaPorPessoaMax": 155
+        },
+        "tipo": "familia",
+        "valor": 50,
+        "motivo": "Renda de até R$ 155 por pessoa, sem Bolsa Família.",
+        "texto": "R$ 50 a R$ 600 por mês",
+        "avisos": [
+          "Na soma usamos o valor mínimo (R$ 50). O valor real depende da família."
+        ]
+      }
+    },
+    {
+      "id": "pr-comida-boa",
+      "uf": "PR",
+      "nome": "Cartão Comida Boa",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "basket2-fill",
+      "resumo": "R$ 80 por mês para comprar comida, para famílias pobres do Paraná.",
+      "valorTexto": "R$ 80 por mês",
+      "paraQuem": [
+        "Famílias no CadÚnico em pobreza ou extrema pobreza no Paraná.",
+        "Prioridade para quem não recebe Bolsa Família."
+      ],
+      "regras": [
+        "Crédito todo dia 25.",
+        "Só para alimentos.",
+        "Lei estadual nº 20.747/2021."
+      ],
+      "comoPedir": [
+        "Seleção pelo CadÚnico. Procure o CRAS."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "incerto",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Comida Boa",
+          "url": "https://www.desenvolvimentosocial.pr.gov.br/ComidaBoa",
+          "orgao": "Governo do Paraná"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": 218
+        },
+        "tipo": "familia",
+        "valor": 80,
+        "motivo": "Família pobre no CadÚnico.",
+        "avisos": [
+          "Quem não recebe Bolsa Família tem prioridade."
+        ]
+      }
+    },
+    {
+      "id": "rs-todo-jovem-na-escola",
+      "uf": "RS",
+      "nome": "Todo Jovem na Escola",
+      "esfera": "estadual",
+      "categoria": "poupanca",
+      "icone": "backpack",
+      "resumo": "Bolsa mensal para estudantes de baixa renda do ensino médio estadual do RS.",
+      "valorTexto": "R$ 150 por mês (R$ 225 integral ou técnico)",
+      "paraQuem": [
+        "Estudantes do ensino médio estadual até 21 anos (EJA até 29).",
+        "Família no CadÚnico com renda de até R$ 660 por pessoa."
+      ],
+      "regras": [
+        "Paga de março a dezembro.",
+        "75% de presença.",
+        "Extras: R$ 150 de material, R$ 300 por etapa concluída (poupança)."
+      ],
+      "comoPedir": [
+        "É automático para alunos com família no CadÚnico. Confira na escola."
+      ],
+      "onde": [
+        "escola",
+        "cras"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Secretaria da Educação do RS",
+          "url": "https://educacao.rs.gov.br",
+          "orgao": "Governo do Rio Grande do Sul"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": 660
+        },
+        "tipo": "porPessoa",
+        "pessoas": {
+          "escola": [
+            "medio"
+          ],
+          "idadeMax": 21
+        },
+        "valor": 150,
+        "motivo": "Estudante do ensino médio estadual com família de baixa renda.",
+        "valorIntegral": 225,
+        "pagamentosPorAno": 10,
+        "avisos": [
+          "Pago em 10 meses (março a dezembro); a soma mostra a média mensal."
+        ]
+      }
+    },
+    {
+      "id": "sc-bolsa-estudante",
+      "uf": "SC",
+      "nome": "Bolsa Estudante",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "backpack",
+      "resumo": "Bolsa para estudantes do ensino médio estadual de famílias do CadÚnico em Santa Catarina.",
+      "valorTexto": "R$ 568,18 por mês (11 meses)",
+      "paraQuem": [
+        "Estudantes do ensino médio ou EJA da rede estadual com família no CadÚnico.",
+        "No máximo 2 por família."
+      ],
+      "regras": [
+        "75% de presença.",
+        "Lei estadual nº 18.338/2022."
+      ],
+      "comoPedir": [
+        "Pela escola, conforme edital da Secretaria de Educação."
+      ],
+      "onde": [
+        "escola"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "confirmar",
+      "conferido": "2026-10-29",
+      "observacao": "A página oficial fala em pagamentos garantidos até 2024. Não confirmamos se continua em 2026.",
+      "fontes": [
+        {
+          "titulo": "Bolsa Estudante — SED/SC",
+          "url": "https://www.sed.sc.gov.br/programas-e-projetos/bolsa-estudante/",
+          "orgao": "Secretaria de Educação de SC"
+        }
+      ],
+      "calculo": {
+        "requisitos": {},
+        "tipo": "porPessoa",
+        "pessoas": {
+          "escola": [
+            "medio"
+          ]
+        },
+        "valor": 568.18,
+        "motivo": "Estudante do ensino médio estadual com família no CadÚnico.",
+        "pagamentosPorAno": 11,
+        "maxPessoas": 2
+      }
+    },
+    {
+      "id": "ms-mais-social",
+      "uf": "MS",
+      "nome": "Mais Social",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "credit-card-2-front-fill",
+      "resumo": "R$ 450 por mês em cartão para comida, gás e higiene, para famílias de baixa renda de MS.",
+      "valorTexto": "R$ 450 por mês",
+      "paraQuem": [
+        "Famílias no CadÚnico com renda de até meio salário mínimo por pessoa."
+      ],
+      "regras": [
+        "Pode usar em alimentos, gás e produtos de higiene.",
+        "Pode ter parcela extra em dezembro.",
+        "Lei estadual nº 6.151/2023."
+      ],
+      "comoPedir": [
+        "Peça pelo site da SEAD ou no CRAS."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "incerto",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Solicitar inclusão no programa Mais Social",
+          "url": "https://www.sead.ms.gov.br/servicos-em-destaque/solicitar-inclusao-no-programa-mais-social/",
+          "orgao": "Governo de Mato Grosso do Sul"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": {
+            "sm": 0.5
+          }
+        },
+        "tipo": "familia",
+        "valor": 450,
+        "motivo": "Renda de até meio salário mínimo por pessoa.",
+        "avisos": [
+          "O número de vagas é limitado e a seleção é feita pelo governo do estado."
+        ]
+      }
+    },
+    {
+      "id": "mt-ser-familia",
+      "uf": "MT",
+      "nome": "Ser Família",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "credit-card-2-front-fill",
+      "resumo": "Cartões de ajuda mensal para famílias em extrema pobreza de Mato Grosso.",
+      "valorTexto": "A partir de R$ 150 por mês",
+      "paraQuem": [
+        "Famílias em extrema pobreza no CadÚnico.",
+        "Linhas: Família, Criança, Idoso, Mulher, Inclusivo, Indígena."
+      ],
+      "regras": [
+        "Lei estadual nº 10.523/2017, alterada pela Lei nº 13.344/2026."
+      ],
+      "comoPedir": [
+        "Procure o CRAS ou a SETASC."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "incerto",
+      "status": "confirmar",
+      "conferido": "2026-10-29",
+      "observacao": "O valor de 2026 não foi confirmado em página oficial.",
+      "fontes": [
+        {
+          "titulo": "SETASC — Mato Grosso",
+          "url": "https://www.setasc.mt.gov.br",
+          "orgao": "Governo de Mato Grosso"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": 218
+        },
+        "tipo": "familia",
+        "valor": 150,
+        "motivo": "Família em extrema pobreza.",
+        "texto": "A partir de R$ 150 por mês"
+      }
+    },
+    {
+      "id": "go-bolsa-estudo",
+      "uf": "GO",
+      "nome": "Bolsa Estudo",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "backpack",
+      "resumo": "Bolsa para todos os alunos do 9º ano e do ensino médio da rede estadual de Goiás.",
+      "valorTexto": "R$ 130 por mês (R$ 150 integral)",
+      "paraQuem": [
+        "Alunos do 9º ano e do ensino médio da rede estadual de Goiás.",
+        "Não depende da renda."
+      ],
+      "regras": [
+        "10 parcelas no ano letivo.",
+        "75% de presença, notas mínimas e sem infrações disciplinares.",
+        "Decreto estadual nº 10.841/2025."
+      ],
+      "comoPedir": [
+        "É automático para alunos matriculados."
+      ],
+      "onde": [
+        "escola"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Bolsa Estudo — Goiás Social",
+          "url": "https://www.goiassocial.go.gov.br/programa/bolsa-estudo/",
+          "orgao": "Governo de Goiás"
+        },
+        {
+          "titulo": "Decreto nº 10.841, de 20/12/2025",
+          "url": "https://goias.gov.br/educacao/wp-content/uploads/sites/40/2026/01/DECRETO-10.841-DE-20-DE-DEZEMBRO-2025_alteracao-valores-bolsa.pdf",
+          "orgao": "Governo de Goiás",
+          "data": "2025-12-20"
+        }
+      ],
+      "calculo": {
+        "requisitos": {},
+        "tipo": "porPessoa",
+        "pessoas": {
+          "escola": [
+            "medio"
+          ]
+        },
+        "valor": 130,
+        "motivo": "Estudante do ensino médio estadual (também vale para o 9º ano).",
+        "valorIntegral": 150,
+        "pagamentosPorAno": 10,
+        "avisos": [
+          "Pago em 10 parcelas; a soma mostra a média mensal."
+        ]
+      }
+    },
+    {
+      "id": "go-maes-de-goias",
+      "uf": "GO",
+      "nome": "Mães de Goiás",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "heart-fill",
+      "resumo": "R$ 300 por mês para mães pobres com filhos pequenos que NÃO recebem Bolsa Família.",
+      "valorTexto": "R$ 300 por mês",
+      "paraQuem": [
+        "Mães com filhos de 0 a 6 anos, no CadÚnico, em situação de pobreza.",
+        "Que não recebem Bolsa Família."
+      ],
+      "regras": [
+        "Não pode ser somado com o Bolsa Família."
+      ],
+      "comoPedir": [
+        "Procure o CRAS ou o site Goiás Social."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "nao",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Mães de Goiás: valor reajustado para R$ 300",
+          "url": "https://goias.gov.br/maes-de-goias-valor-sera-reajustado-para-r-300/",
+          "orgao": "Governo de Goiás"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "bolsaFamilia": "exclui",
+          "alguem": [
+            {
+              "idadeMax": 6
+            },
+            {
+              "responsavel": true
+            }
+          ],
+          "rendaPorPessoaMax": {
+            "sm": 0.5
+          }
+        },
+        "tipo": "familia",
+        "valor": 300,
+        "motivo": "Mãe com criança de até 6 anos, sem Bolsa Família.",
+        "avisos": [
+          "Não pode ser somado com o Bolsa Família."
+        ]
+      }
+    },
+    {
+      "id": "go-dignidade",
+      "uf": "GO",
+      "nome": "Dignidade",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "person-heart",
+      "resumo": "R$ 300 por mês para pessoas de 60 a 64 anos em situação de pobreza que NÃO recebem Bolsa Família.",
+      "valorTexto": "R$ 300 por mês",
+      "paraQuem": [
+        "Pessoas de 60 a 64 anos, no CadÚnico, em situação de pobreza.",
+        "Que não recebem Bolsa Família."
+      ],
+      "regras": [
+        "Prorrogado para 2026 pelo Decreto estadual nº 10.832/2025."
+      ],
+      "comoPedir": [
+        "Procure o CRAS ou o site Goiás Social."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "nao",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "Goiás Social",
+          "url": "https://www.goiassocial.go.gov.br",
+          "orgao": "Governo de Goiás"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "bolsaFamilia": "exclui",
+          "rendaPorPessoaMax": {
+            "sm": 0.5
+          }
+        },
+        "tipo": "porPessoa",
+        "pessoas": {
+          "idadeMin": 60,
+          "idadeMax": 64,
+          "semAposentadoria": true
+        },
+        "valor": 300,
+        "motivo": "Tem de 60 a 64 anos e renda baixa, sem Bolsa Família."
+      }
+    },
+    {
+      "id": "df-social",
+      "uf": "DF",
+      "nome": "DF Social",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "credit-card-2-front-fill",
+      "resumo": "R$ 150 por mês para famílias de baixa renda do Distrito Federal.",
+      "valorTexto": "R$ 150 por mês",
+      "paraQuem": [
+        "Famílias no CadÚnico com renda de até meio salário mínimo por pessoa."
+      ],
+      "regras": [
+        "Lei distrital nº 7.008/2021.",
+        "Depende do orçamento disponível."
+      ],
+      "comoPedir": [
+        "Procure o CRAS. A seleção usa o CadÚnico."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "SEDES-DF",
+          "url": "https://www.sedes.df.gov.br",
+          "orgao": "Governo do Distrito Federal"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": {
+            "sm": 0.5
+          }
+        },
+        "tipo": "familia",
+        "valor": 150,
+        "motivo": "Renda de até meio salário mínimo por pessoa."
+      }
+    },
+    {
+      "id": "df-prato-cheio",
+      "uf": "DF",
+      "nome": "Cartão Prato Cheio",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "basket2-fill",
+      "resumo": "R$ 250 por mês para comprar comida, para famílias em insegurança alimentar no DF.",
+      "valorTexto": "R$ 250 por mês, por 18 meses",
+      "paraQuem": [
+        "Famílias em situação de insegurança alimentar no Distrito Federal."
+      ],
+      "regras": [
+        "18 parcelas, sem renovação automática.",
+        "Só para alimentos."
+      ],
+      "comoPedir": [
+        "Procure o CRAS."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "SEDES-DF",
+          "url": "https://www.sedes.df.gov.br",
+          "orgao": "Governo do Distrito Federal"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": {
+            "sm": 0.5
+          }
+        },
+        "tipo": "familia",
+        "valor": 250,
+        "motivo": "Família de baixa renda em insegurança alimentar.",
+        "avisos": [
+          "Só para alimentos."
+        ],
+        "temporario": "18 meses"
+      }
+    },
+    {
+      "id": "df-cartao-gas",
+      "uf": "DF",
+      "nome": "Cartão Gás DF",
+      "esfera": "estadual",
+      "categoria": "dinheiro",
+      "icone": "fire",
+      "resumo": "R$ 100 a cada 2 meses para ajudar a comprar gás de cozinha no DF.",
+      "valorTexto": "R$ 100 a cada 2 meses",
+      "paraQuem": [
+        "Famílias no CadÚnico de baixa renda no Distrito Federal."
+      ],
+      "regras": [
+        "Decreto distrital nº 42.376/2021."
+      ],
+      "comoPedir": [
+        "Seleção pelo CadÚnico."
+      ],
+      "onde": [
+        "cras",
+        "estado"
+      ],
+      "acumulaBolsaFamilia": "sim",
+      "status": "ativo",
+      "conferido": "2026-10-29",
+      "fontes": [
+        {
+          "titulo": "SEDES-DF",
+          "url": "https://www.sedes.df.gov.br",
+          "orgao": "Governo do Distrito Federal"
+        }
+      ],
+      "calculo": {
+        "requisitos": {
+          "rendaPorPessoaMax": {
+            "sm": 0.5
+          }
+        },
+        "tipo": "familia",
+        "valor": 100,
+        "motivo": "Família de baixa renda no CadÚnico.",
+        "pagamentosPorAno": 6,
+        "texto": "R$ 100 a cada 2 meses"
+      }
+    }
+  ]
+}

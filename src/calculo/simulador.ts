@@ -1,4 +1,4 @@
-import { BPC } from '../data/referencias'
+import { BPC } from '../servicos/referencias'
 import { gerarDicas } from './dicas'
 import { aplicarRegras, criarBeneficio } from './regras/aplicar'
 import { avaliarBolsaFamilia } from './regras/bolsaFamilia'

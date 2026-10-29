@@ -14,14 +14,9 @@ export const NOMES_UF: Record<UF, string> = {
   SC: 'Santa Catarina', SP: 'São Paulo', SE: 'Sergipe', TO: 'Tocantins',
 }
 
-/** Uma referência oficial (lei, decreto, portaria ou página de órgão público). */
-export interface Fonte {
-  titulo: string
-  url: string
-  orgao: string
-  /** Data da publicação ou da consulta, no formato AAAA-MM-DD. */
-  data?: string
-}
+/** Tipos do "banco" (src/dados): definidos uma vez no esquema e reaproveitados aqui. */
+export type { Fonte, Programa } from '../dados/esquema'
+import type { Locais, Programa } from '../dados/esquema'
 
 /**
  * dinheiro: cai na conta ou no cartão todo mês
@@ -30,45 +25,14 @@ export interface Fonte {
  * desconto: abatimento em conta (luz)
  * trabalhista: depende de emprego ou atividade (não é assistência social)
  */
-export type Categoria = 'dinheiro' | 'poupanca' | 'produto' | 'desconto' | 'trabalhista'
+export type Categoria = Programa['categoria']
 
 /**
  * ativo: confirmado em fonte oficial com pagamentos recentes
  * confirmar: existe em lei, mas não achamos prova de pagamento recente — não entra na soma
  */
-export type Status = 'ativo' | 'confirmar'
+export type Status = Programa['status']
 
-export type Acumula = 'sim' | 'nao' | 'incerto'
+export type Acumula = Programa['acumulaBolsaFamilia']
 
-export interface Programa {
-  id: string
-  nome: string
-  esfera: 'federal' | 'estadual'
-  uf?: UF
-  categoria: Categoria
-  icone: string
-  /** Uma frase curta, em linguagem simples. */
-  resumo: string
-  valorTexto: string
-  paraQuem: string[]
-  regras: string[]
-  comoPedir: string[]
-  /** Ids de LOCAIS (onde ir). */
-  onde: string[]
-  acumulaBolsaFamilia: Acumula
-  status: Status
-  observacao?: string
-  fontes: Fonte[]
-  /** Quando conferimos os dados pela última vez (AAAA-MM-DD). */
-  conferido: string
-}
-
-export interface Local {
-  id: string
-  nome: string
-  icone: string
-  oQueE: string
-  comoAchar: string
-  telefone?: string
-  link?: string
-}
+export type Local = Locais['locais'][number]

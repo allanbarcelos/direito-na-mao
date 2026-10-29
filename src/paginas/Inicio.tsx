@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom'
 import { Instalar } from '../componentes/Instalar'
 import { Ouvir } from '../componentes/Ouvir'
 import { NOME_SITE, SLOGAN } from '../config'
-import { DESTAQUES } from '../data/gastos'
-import { PROGRAMAS_ESTADUAIS } from '../data/programasEstaduais'
-import { PROGRAMAS_FEDERAIS } from '../data/programasFederais'
-import { BOLSA_FAMILIA, SALARIO_MINIMO } from '../data/referencias'
+import { DESTAQUES } from '../servicos/gastos'
+import { PROGRAMAS_ESTADUAIS, PROGRAMAS_FEDERAIS } from '../servicos/catalogo'
+import { BOLSA_FAMILIA, SALARIO_MINIMO } from '../servicos/referencias'
 import { brl, brlGrande, dataBR } from '../lib/formatar'
 
 export function Inicio() {

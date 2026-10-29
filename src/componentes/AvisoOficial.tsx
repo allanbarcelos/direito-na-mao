@@ -1,6 +1,6 @@
 import { Icone } from './Icone'
 import { Link } from 'react-router-dom'
-import { DATA_ATUALIZACAO } from '../data/referencias'
+import { DATA_ATUALIZACAO } from '../servicos/referencias'
 import { dataBR } from '../lib/formatar'
 
 /** Faixa fixa em todas as páginas: o site não é do governo, mas segue as fontes oficiais. */

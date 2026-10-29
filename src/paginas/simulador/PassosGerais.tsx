@@ -1,7 +1,7 @@
 import { Icone } from '../../componentes/Icone'
 import type { Familia } from '../../calculo/tipos'
 import { Contador, SimNao, TituloPergunta } from '../../componentes/Perguntas'
-import { NOMES_UF, UFS, type UF } from '../../data/tipos'
+import { NOMES_UF, UFS, type UF } from '../../servicos/tipos'
 import type { Modo } from '../../estado/simulacao'
 
 /** Estados com cidades no semiárido. */

@@ -1,5 +1,5 @@
-import { programaPorId } from '../../data/catalogo'
-import type { Status } from '../../data/tipos'
+import { programaPorId } from '../../servicos/catalogo'
+import type { Status } from '../../servicos/tipos'
 import type { Avaliacao, BeneficioCalculado, Contexto, Regra } from '../tipos'
 
 export interface BeneficioComStatus {

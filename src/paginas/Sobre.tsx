@@ -3,8 +3,8 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Fontes } from '../componentes/Fontes'
 import { NOME_SITE } from '../config'
-import { PROGRAMAS } from '../data/catalogo'
-import { DATA_ATUALIZACAO, FONTES_REFERENCIA } from '../data/referencias'
+import { PROGRAMAS } from '../servicos/catalogo'
+import { DATA_ATUALIZACAO, FONTES_REFERENCIA } from '../servicos/referencias'
 import { dataBR } from '../lib/formatar'
 
 /** Rola até a lista de fontes e leva o foco para ela (leitores de tela). */

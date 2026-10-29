@@ -1,4 +1,4 @@
-import { BPC, SALARIO_MINIMO } from '../../data/referencias'
+import { BPC, SALARIO_MINIMO } from '../../servicos/referencias'
 import { brl } from '../../lib/formatar'
 import type { Familia, Pessoa, Regra } from '../tipos'
 import { nomeDe } from './comum'

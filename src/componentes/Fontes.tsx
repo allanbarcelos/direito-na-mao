@@ -1,5 +1,5 @@
 import { Icone } from './Icone'
-import type { Fonte } from '../data/tipos'
+import type { Fonte } from '../servicos/tipos'
 import { dataBR } from '../lib/formatar'
 
 export function Fontes({ fontes, titulo = 'Fontes oficiais' }: { fontes: Fonte[]; titulo?: string }) {

@@ -1,6 +1,6 @@
 import { Icone } from '../componentes/Icone'
 import { Ouvir } from '../componentes/Ouvir'
-import { APLICATIVOS, CANAIS, LOCAIS } from '../data/locais'
+import { APLICATIVOS, CANAIS, LOCAIS } from '../servicos/locais'
 
 const DOCUMENTOS = [
   'CPF ou título de eleitor do responsável pela família',
