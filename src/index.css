@@ -123,7 +123,9 @@ h1 .bi, h2 .bi, h3 .bi { color: var(--verde); margin-right: 0.15em; }
 /* O foco no <main> é programático (troca de página); não precisa de contorno. */
 main:focus, #fontes:focus { outline: none; }
 
-.conteudo { max-width: 960px; margin: 0 auto; padding: 16px 16px 120px; }
+/* Rodapé "grudado" no fim: em páginas curtas ele fica no pé da tela, sem cobrir o conteúdo. */
+#root { display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh; }
+.conteudo { flex: 1 0 auto; width: 100%; max-width: 960px; margin: 0 auto; padding: 16px 16px 40px; }
 
 /* ---------- topo ---------- */
 .topo {
@@ -170,7 +172,6 @@ main:focus, #fontes:focus { outline: none; }
 @media (min-width: 900px) {
   .nav { position: sticky; top: 0; bottom: auto; border-top: none; border-bottom: 2px solid var(--borda); }
   .nav a { flex-direction: row; font-size: 1rem; gap: 8px; }
-  .conteudo { padding-bottom: 48px; }
 }
 
 /* ---------- blocos ---------- */
@@ -283,10 +284,51 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-sp
 
 .busca { margin-bottom: 14px; }
 
-.rodape { text-align: center; color: var(--texto-2); font-size: 0.85rem; padding: 24px 16px; }
+/* ---------- rodapé ---------- */
+.rodape {
+  --rodape-fundo: #0a3d23; --rodape-texto: #e3efe7; --rodape-suave: #b7cdbf; --rodape-link: #ffffff; --rodape-borda: rgba(255, 255, 255, 0.18);
+  background: var(--rodape-fundo); color: var(--rodape-texto); font-size: 0.92rem;
+  /* No celular a barra de navegação fica fixa embaixo; o rodapé reserva esse espaço. */
+  padding-bottom: calc(72px + env(safe-area-inset-bottom));
+}
+:root[data-contraste='alto'] .rodape { --rodape-fundo: #000; --rodape-texto: #fff; --rodape-suave: #fff; --rodape-link: #ff0; --rodape-borda: #fff; border-top: 3px solid #fff; }
+.rodape a { color: var(--rodape-link); }
+.rodape h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--rodape-suave); margin: 0 0 12px; }
+.rodape-conteudo {
+  max-width: 960px; margin: 0 auto; padding: 32px 16px 24px;
+  display: grid; gap: 24px 20px; grid-template-columns: 1fr 1fr;
+}
+/* No celular: marca e telefones ocupam a linha toda; as listas de links ficam lado a lado. */
+.rodape-marca, .rodape-coluna:last-child { grid-column: 1 / -1; }
+@media (min-width: 900px) {
+  .rodape-conteudo { grid-template-columns: 1.6fr 1fr 1fr 1fr; }
+  .rodape-marca, .rodape-coluna:last-child { grid-column: auto; }
+}
+.rodape .rodape-nome { display: flex; align-items: center; gap: 10px; font-size: 1.15rem; text-transform: none; letter-spacing: 0; color: var(--rodape-link); }
+.rodape-nome img { border-radius: 8px; }
+.rodape-marca p { margin: 0 0 10px; }
+.rodape-aviso { color: var(--rodape-suave); font-size: 0.85rem; }
+.rodape-aviso .bi { margin-right: 4px; }
+.rodape ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.rodape li { color: var(--rodape-suave); }
+.rodape li a { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; text-decoration: none; font-weight: 700; }
+.rodape li a:hover, .rodape li a:focus-visible { text-decoration: underline; }
+.rodape li .bi { margin-right: 4px; }
+.rodape-base {
+  max-width: 960px; margin: 0 auto; padding: 12px 16px;
+  border-top: 1px solid var(--rodape-borda);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 20px;
+  font-size: 0.85rem; color: var(--rodape-suave);
+}
+.rodape-base p { margin: 0; }
+.rodape-base .separador { margin: 0 8px; }
+.rodape-github { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 700; }
+.rodape-github .bi { font-size: 1.25rem; }
+/* No computador a navegação fica no topo; não precisa reservar espaço embaixo. */
+@media (min-width: 900px) { .rodape { padding-bottom: 0; } }
 
 @media print {
-  .nav, .topo .acessibilidade, .ouvir, .navegacao-passos, .nao-imprimir { display: none !important; }
+  .nav, .topo .acessibilidade, .ouvir, .navegacao-passos, .nao-imprimir, .rodape { display: none !important; }
   body { background: #fff; color: #000; }
   .cartao { box-shadow: none; break-inside: avoid; }
 }
@@ -295,9 +337,6 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-sp
   * { transition: none !important; animation: none !important; }
 }
 
-.rodape .autoria { margin-top: 12px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 20px; }
-.rodape .autoria a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; }
-.rodape .autoria .bi { font-size: 1.2rem; }
 
 .botoes-pdf { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
 .botoes-pdf .botao { flex: 1 1 240px; }
